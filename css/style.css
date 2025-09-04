@@ -12,12 +12,18 @@ body {
     font-family: "montserrat";
 }
 
-header {    
+/* Configurando o header e seus elementos - inicio */
+
+header { 
+    position: fixed;
+    top: 0;
+    left: 0;   
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background-color: #fff;
 }
 
 .logoBusca {
@@ -213,5 +219,11 @@ li, a {
 /* Mostra o menu dropdown com hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .button {background-color: #3e8e41;}
+/* Configurando o header e seus elementos - fim */
+
+/* Configurando a main e seus elementos - inicio */
+
+main {
+    margin-top: 10%;
+}
+
