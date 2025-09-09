@@ -31,8 +31,6 @@
                                 Us</a>,...</h6>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -131,29 +129,36 @@
             </div>
         </section>
         <section id="filmes">
-            <div class="titulo-principal">
+            <div class="barra-top"></div>
+            <div class="titulo-filmes">
                 <h1>Filmes</h1>
             </div>
-            <nav>
-                <ul>
+            <nav class="lista-filmes">
+                <ul class="lista-itens">
                     <li>Filmes mais populares</li>
                     <li>Melhores filmes de comédia</li>
                     <li>Melhores filmes de ação</li>
                     <li>Melhores filmes de crianças</li>
-                    <li>Agenda de estreias</li>
-                    <li>Melhores filmes em cartaz</li>
-                    <li>Bilheterias do cinema</li>
-                    <li>Filmes para criança em cartaz</li>
-                    <li>Filmes de comédia mais populares</li>
-                    <li>Filmes de ação mais populares</li>
-                    <li>Todos os filmes para criançãs</li>
-                    <li>Trailers de filmes</li>
-                    <li>Trailers de filmes em breve</li>
                 </ul>
+                <div class="dropdown-lista">
+                    <div class="link-plus"><a href="">+</a></div>
+                    <div class="dropdown-trailers">
+                        <li><a href="agenda">Agenda de estreias</a></li>
+                        <li><a href="melhores">Melhores filmes em cartaz</a></li>
+                        <li><a href="bilheteria">Bilheterias do cinema</a></li>
+                        <li><a href="criancas">Filmes para criança em cartaz</a></li>
+                        <li><a href="comedia">Filmes de comédia mais populares</a></li>
+                        <li><a href="acao">Filmes de ação mais populares</a></li>
+                        <li><a href="todosCriancas">Todos os filmes para crianças</a></li>
+                        <li><a href="trailers">Trailers de filmes</a></li>
+                        <li><a href="breve">Trailers de filmes em breve</a></li>
+                    </div>
+                </div>                
             </nav>
             <div id="cep">
-                <div>
-                    <input type="text">busca CEP
+                <div class="input-cep">
+                    <input type="text" placeholder="Cidade ou CEP">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
                 <div>
                     <h5><a href="Login">Faça login para pesquisar seus cinemas favoritos</a></h5>
@@ -265,60 +270,71 @@
                 <div class="card">
                     <div class="card-trailer">
                         <img src="" alt="">
-                        <p>nome filme link</p>                        
+                        <p>nome filme link</p>
                     </div>
                     <div class="card-trailer">
                         <img src="" alt="">
-                        <p>nome filme link</p>                        
+                        <p>nome filme link</p>
                     </div>
                     <div class="card-trailer">
                         <img src="" alt="">
-                        <p>nome filme link</p>                        
+                        <p>nome filme link</p>
                     </div>
                     <div class="card-trailer">
                         <img src="" alt="">
-                        <p>nome filme link</p>                        
-                    </div>                   
+                        <p>nome filme link</p>
+                    </div>
                 </div>
                 <div class="btn">
                     <button><a href="">Todos os trailers</a></button>
                 </div>
+                <aside>
+                    <div>
+                        anuncio
+                    </div>
+                </aside>
             </div>
-            <aside>
-                <div>
-                    anuncio
-                </div>
-            </aside>
 
-            <div class="criticas">
-                <div>
+            <div class="ultimas-criticas">
+                <div class="titulo">
                     <h3>Nossas últimas críticas</h3>
                 </div>
                 <div class="cartaz">
-                    <img src="" alt="">1
-                    <p>texto cartaz 1</p>
-                    <img src="" alt="">estrelas
-                    <img src="" alt="">2
-                    <p>texto cartaz 2</p>
-                    <img src="" alt="">estrelas
-                    <img src="" alt="">3
-                    <p>texto cartaz 3</p>
-                    <img src="" alt="">estrelas
-                    <img src="" alt="">4
-                    <p>texto cartaz 4</p>
-                    <img src="" alt="">estrelas
-                    <img src="" alt="">5
-                    <p>texto cartaz 5</p>
-                    <img src="" alt="">estrelas
-                    <img src="" alt="">6
-                    <p>texto cartaz 6</p>
-                    <img src="" alt="">estrelas
+                    <div>
+                        <img src="" alt="">1
+                        <p>texto cartaz 1</p>
+                        <img src="" alt="">estrelas
+                    </div>
+                    <div>
+                        <img src="" alt="">2
+                        <p>texto cartaz 2</p>
+                        <img src="" alt="">estrelas
+                    </div>
+                    <div>
+                        <img src="" alt="">3
+                        <p>texto cartaz 3</p>
+                        <img src="" alt="">estrelas
+                    </div>
+                    <div>
+                        <img src="" alt="">4
+                        <p>texto cartaz 4</p>
+                        <img src="" alt="">estrelas
+                    </div>
+                    <div>
+                        <img src="" alt="">5
+                        <p>texto cartaz 5</p>
+                        <img src="" alt="">estrelas
+                    </div>
+                    <div>
+                        <img src="" alt="">6
+                        <p>texto cartaz 6</p>
+                        <img src="" alt="">estrelas
+                    </div>
                 </div>
                 <div class="btn">
                     <button><a href="">Todas as últimas críticas</a></button>
                 </div>
             </div>
-
         </section>
 
     </main>
