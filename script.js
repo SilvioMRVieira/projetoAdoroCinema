@@ -1,28 +1,60 @@
+
+//menu dropdown com clique alterar o conteudo do botão
+
+const botao = document.getElementById('botao');
+const original = botao.textContent;
+
+botao.addEventListener('click', function () {
+
+  if (botao.textContent === original) { // 4. Verifica se o texto é o original
+      botao.textContent = 'x'; // Se sim, altera o texto
+    } else {
+      botao.textContent = original; // Senão, retorna ao texto original
+    }
+  });
+
+
+
+
+
 let count = 1;
 
 document.getElementById("slide1").checked = true;
 
-setInterval(function() {
-    nextImage();
-},3000);
+setInterval(function () {
+  nextImage();
+}, 2000);
 
 function nextImage() {
-    count++
-    if(count>3){
-        count = 1;
-    }
-    document.getElementById("slide"+count).checked = true;
+  count++
+  if (count > 3) {
+    count = 1;
+  }
+  document.getElementById("slide" + count).checked = true;
 }
 
-// let slideIndex = 0;
-// const wrapper = document.getElementById('slider-wrapper');
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-// function showSlides() {
-//   if (slideIndex > 2) { // Se for a terceira imagem (índice 2), volta ao início
-//     slideIndex = 0;
-//   }
-//   wrapper.style.marginLeft = `-${slideIndex * 100}%`; // Avança para a próxima imagem
-//   slideIndex++;
-// }
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
-// setInterval(showSlides, 3000); // Muda para o próximo slide a cada 3 segundos
+
+
+
+
+

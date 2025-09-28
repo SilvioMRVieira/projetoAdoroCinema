@@ -10,6 +10,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="/css/carrossel.css">
     <title>Adoro Cinema</title>
     <link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
@@ -33,33 +35,34 @@
                 </div>
             </div>
         </div>
-
-        <div class="nav-texto">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="filmes">FILMES</a></li>
-                    <li><a href="programacao">PROGRAMAÇÃO</a></li>
-                    <li><a href="trailer">TRAILER</a></li>
-                    <li><a href="noticias">NOTICIAS</a></li>
-                    <li><a href="series">SÉRIES</a></li>
-                    <li><a href="televisao">TELEVISÃO</a></li>
-                    <li><a href="filmesonline">FILMES ONLINE</a></li>
-                    <li><a href="novelas">NOVELAS</a></li>
-                </ul>
-                <ul class="dropdown">
-                    <li><a class="minha-conta" href="minhaConta">MINHA CONTA</a></li>
-                    <div class="dropdown-content">
-                        <a href="#">CONECTAR</a>
-                        <a class="criar-conta" href="#">CRIAR UMA CONTA</a>
-                    </div>
-                </ul>
-            </nav>
-            <div class="texto">Descubra nossa busca por <a href="programacao">horários de filmes</a>, as <a
-                    href="noticias">notícias</a> e
-                <a href="materias">matérias especiais</a> de cinema, os <a href="ultimas">últimos trailers</a> e mais...
-            </div>
-        </div>
     </header>
+
+    <div class="nav-texto">
+        <nav class="nav-header">
+            <ul class="nav-links">
+                <li><a href="filmes">FILMES</a></li>
+                <li><a href="programacao">PROGRAMAÇÃO</a></li>
+                <li><a href="trailer">TRAILER</a></li>
+                <li><a href="noticias">NOTICIAS</a></li>
+                <li><a href="series">SÉRIES</a></li>
+                <li><a href="televisao">TELEVISÃO</a></li>
+                <li><a href="filmesonline">FILMES ONLINE</a></li>
+                <li><a href="novelas">NOVELAS</a></li>
+            </ul>
+            <ul class="dropdown">
+                <li><a class="minha-conta" href="minhaConta">MINHA CONTA</a></li>
+                <div class="dropdown-content">
+                    <a href="#">CONECTAR</a>
+                    <a class="criar-conta" href="#">CRIAR UMA CONTA</a>
+                </div>
+            </ul>
+        </nav>
+        <div class="texto">Descubra nossa busca por <a href="programacao">horários de filmes</a>, as <a
+                href="noticias">notícias</a> e
+            <a href="materias">matérias especiais</a> de cinema, os <a href="ultimas">últimos trailers</a> e mais...
+        </div>
+    </div>
+
     <main>
         <section class="section-first">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -108,7 +111,44 @@
         </section>
 
         <section class="card-img">
-            <div class="img">
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-slide slide1">
+                        <img src="/img/odeio-cinema.jpg" alt="">
+                        <div class="card-texto">
+                            <p>Quais são as teorias mais bizarras sobre filmes?
+                                Confira o debate no OdeioCinema!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide slide2">
+                        <img src="/img/allen_trump.jpg" alt="">
+                        <div class="card-texto">
+                            <p>Woody Allen gostaria de dirigir Donald Trump </p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide slide3">
+                        <img src="/img/monstro.jpg" alt="">
+                        <div class="card-texto">
+                            <p>Compare o serial killer de Monstro: A História de Ed Gein com o assasino real</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide slide4">
+                        <img src="/img/app_adoroCinema.webp" alt="">
+                        <div class="card-texto">
+                            <p>Novo app do AdoroCinema</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- SETAS DENTRO DO CONTAINER -->
+                <button class="carousel-arrow arrow-left" id="arrowleft" onclick="moveCarousel(-1)">
+                    ❮
+                </button>
+                <button class="carousel-arrow arrow-right" id="arrowleft" onclick="moveCarousel(1)">
+                    ❯
+                </button>
+
+            </div>
+            <!-- <div class="img">
                 <img src="/img/odeio-cinema.jpg" alt="">
                 <div class="card-texto">
                     <p>Quais são as teorias mais bizarras sobre filmes?
@@ -126,7 +166,7 @@
                 <div class="card-texto">
                     <p>Novo app do AdoroCinema</p>
                 </div>
-            </div>
+            </div> -->
         </section>
         <section id="filmes">
             <div class="barra-top"></div>
@@ -141,8 +181,8 @@
                     <li>Melhores filmes de crianças</li>
                 </ul>
                 <div class="dropdown-lista">
-                    <div class="link-plus"><a href="">+</a></div>
-                    <div class="dropdown-trailers">
+                    <button onclick="myFunction()" id="botao" class="dropbtn">+</button>
+                    <div id="myDropdown" class="dropdown-content">
                         <li><a href="agenda">Agenda de estreias</a></li>
                         <li><a href="melhores">Melhores filmes em cartaz</a></li>
                         <li><a href="bilheteria">Bilheterias do cinema</a></li>
@@ -153,66 +193,84 @@
                         <li><a href="trailers">Trailers de filmes</a></li>
                         <li><a href="breve">Trailers de filmes em breve</a></li>
                     </div>
-                </div>                
+                </div>
             </nav>
             <div id="cep">
                 <div class="input-cep">
                     <input type="text" placeholder="Cidade ou CEP">
                     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
-                <div>
+                <div class="pesquisa-login">
                     <h5><a href="Login">Faça login para pesquisar seus cinemas favoritos</a></h5>
                 </div>
             </div>
-            <div id="estreia-cartaz-esperado">
-                <div class="titulo">
-                    <h3>Estreias da semana</h3>
+            <div class="container-esperados">
+                <div class="estreia">
+                    <div class="bar-left"></div>
+                    <div class="item-titulo">
+                        <h3>Estreias da semana</h3>
+                    </div>
+                    <div class="estreia-carousel">
+                        carousel -> imagem + nome dos filmes
+                    </div>
+                    <div class="btn">
+                        <button><a href="lancamentos">Todos os lançamentos</a></button>
+                    </div>
                 </div>
-                <div class="estreia-carousel">
-                    carousel -> imagem + nome dos filmes
-                </div>
-                <div class="btn">
-                    <button><a href="lancamentos">Todos os lançamentos</a></button>
+
+                <div class="cartaz">
+                    <div class="item-titulo">
+                        <div class="bar-left"></div>
+                        <h3>Em cartaz</h3>
+                    </div>
+                    <div class="card">
+                        4 cards + nome do filme
+                    </div>
+                    <div class="btn">
+                        <button><a href="filmesCartaz">Todos os filmes em cartaz</a></button>
+                    </div>
                 </div>
             </div>
+
             <div class="mais-esperados">
-                <div class="titulo">
-                    <h3>Mais Esperados</h3>
-                    <p>Os lançamentos mais aguradados</p>
+
+                <div class="esperados">
+                    <div class="item-titulo">
+                        <h3>Mais esperados</h3>
+                        <p>Os lançamentos mais aguradados</p>
+                    </div>
+                    <div>
+                        imagem + nome dos filmes
+                    </div>
+                    <div class="esperados-lista">
+                        <ul>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                            <li>Filme</li>
+                        </ul>
+                    </div>
+
                 </div>
-                <div>
-                    imagem + nome dos filmes
+                <div class="btn-esperados">
+
+                    <div class="btn">
+                        <button><a href="proximosLacamentos">Todos os próximos lançamentos</a></button>
+                    </div>
+
                 </div>
-                <div class="esperados-lista">
-                    <ul>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                        <li>Filme</li>
-                    </ul>
-                </div>
-                <div class="btn">
-                    <button><a href="proximosLacamentos">Todos os próximos lançamentos</a></button>
-                </div>
+
             </div>
-            <div class="em-cartaz">
-                <div class="titulo">
-                    <h3>Mais esperados</h3>
-                    <p>Os lançamentos mais aguardados</p>
-                </div>
-                <div class="card">
-                    4 cards + nome do filme
-                </div>
-                <div class="btn">
-                    <button><a href="filmesCartaz">Todos os filmes em cartaz</a></button>
-                </div>
-            </div>
+
+
+
+
             <div class="card -pesquisa">
                 card com link
             </div>
@@ -338,6 +396,8 @@
         </section>
 
     </main>
+    <script src="script.js"></script>
+    <script src="carrossel.js"></script>
 </body>
 
 </html>

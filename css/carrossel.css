@@ -1,0 +1,87 @@
+/* CONTAINER PRINCIPAL */
+        .carousel-container {
+            width: 100%;
+            position: relative;
+            overflow: hidden;  /* ESSENCIAL */
+            border-radius: 10px;
+            background: white;
+        }
+
+        /* CONTAINER DOS SLIDES */
+        .carousel {
+            display: flex;
+            align-items: center;
+            height: 25vh;
+            transition: transform 0.5s ease;
+        }
+
+        /* CADA SLIDE */
+        .carousel-slide {
+            min-width: calc(100% / 3);  /* 3 slides visíveis */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            box-sizing: border-box;
+        }
+
+        .carousel-slide .card-texto {
+            background-image: linear-gradient(to top, rgba(000, 0, 0, 1), rgba(255, 0, 0, 0));
+            font-size: 0.6em;
+            font-weight: bold;
+            width: 32%;
+            height: 50px;
+            text-align: left;
+            color: #fff;
+            position: absolute;
+            z-index: 51;
+            bottom: 0;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .carousel-slide img {
+            width: 98%;
+            border-radius: 10px;
+        }
+
+        /* SETAS DENTRO DO CONTAINER */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            background: gold;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }            
+       
+  
