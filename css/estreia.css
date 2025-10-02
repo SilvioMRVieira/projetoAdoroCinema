@@ -1,0 +1,161 @@
+.carousel-estreia .container-estreias {
+    margin-top: 10px;
+    width:100%;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+}
+
+/* Cada imagem ocupa 1/3 do container */
+.imagem {
+    width: calc(25% - 10px);
+    height: 80%;
+    flex-shrink: 0;
+    display: none;
+}
+
+        /* Esconder o quinto slide inicialmente */
+        .slide5 {
+            display: none;
+        }
+
+        /* Imagem preenche todo o espaço */
+        .imagem img {
+            border-radius: 10px;
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+        }
+
+        /* Estados de visibilidade */
+        .show1234 .slide1, .show1234 .slide2, .show1234 .slide3, .show1234 .slide4 { display: block; }
+        .show2345 .slide2, .show2345 .slide3, .show2345 .slide4, .show2345 .slide5 { display: block; }
+        .show3456 .slide3, .show3456 .slide4, .show3456 .slide5, .show3456 .slide6 { display: block; }
+        .show4567 .slide4, .show4567 .slide5, .show4567 .slide6, .show4567 .slide7 { display: block; }
+        .show5678 .slide5, .show5678 .slide6, .show5678 .slide7, .show5678 .slide8 { display: block; }
+        .show6789 .slide6, .show6789 .slide7, .show6789 .slide8, .show6789 .slide9 { display: block; }       
+
+        /* Botões */
+        .btn-prev, .btn-next {
+            width: 25px;
+            height: 25px;
+            background: #dbd7d7;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            position: relative;
+            left: 40%;
+            top: -340px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            display: inline-flex;
+        }
+
+        .btn-prev:hover, .btn-next:hover {
+            background: gold;
+        }
+
+        .nomeFilme p {
+            text-align: center;
+            padding-left: 10px;
+            margin: 0;
+            text-shadow: none;
+        }
+
+        .linha1 {
+            font-size: .95rem;
+            font-weight: bold;
+        }
+
+        .linha2 {
+            font-size: .7rem;
+        }
+
+        .btn-lancamentos {
+            position: relative;
+            top: -50px;
+        }
+
+        .btn-lancamentos button{
+            width: 40%;
+            height: 6vh;
+            background-color: #fff;            
+            border-radius: 20px;
+            border: 1px solid black;            
+        }
+
+        .btn-lancamentos button:hover {
+            background-color: rgb(236, 236, 234);
+        }
+
+
+        .btn-lancamentos a {
+            color: #000;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .cartaz-card {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1%;            
+            border-radius: 10px;
+        }
+
+        .card-cartaz {
+            position: relative;
+            z-index: 0;
+            border: 1px solid black;
+        }
+
+        .imgSombra {
+            position: relative;            
+            border-radius: 10px;
+        }
+
+        .imgSombra img{
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .legenda {
+            position: absolute;
+            bottom: 5%;
+            left: 25%;
+            color: #fff;
+            font-size: 1.2rem;
+            visibility: hidden;
+        }
+
+        .imgSombra:hover {
+            cursor: pointer;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.74%, #000 80%);
+        }
+
+        .imgSombra:hover .legenda {
+            visibility: visible;
+        }
+
+        .card-cartaz:hover .cartazFilme .linha1 {
+            color: blue;
+        }
+ 
+        .card-cartaz p {text-align: start;
+            padding-left: 10px;
+            margin: 0;
+            text-shadow: none;
+            text-align: center;
+        }
+
+
+
+
+
+

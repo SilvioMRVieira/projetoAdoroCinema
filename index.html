@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/container.css">
     <link rel="stylesheet" href="/css/carrossel.css">
+    <link rel="stylesheet" href="css/estreia.css">
     <title>Adoro Cinema</title>
     <link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
@@ -146,27 +147,8 @@
                 <button class="carousel-arrow arrow-right" id="arrowleft" onclick="moveCarousel(1)">
                     ❯
                 </button>
+            </div>
 
-            </div>
-            <!-- <div class="img">
-                <img src="/img/odeio-cinema.jpg" alt="">
-                <div class="card-texto">
-                    <p>Quais são as teorias mais bizarras sobre filmes?
-                        Confira o debate no OdeioCinema!</p>
-                </div>
-            </div>
-            <div class="img">
-                <img src="/img/allen_trump.jpg" alt="">
-                <div class="card-texto">
-                    <p>Woody Allen gostaria de dirigir Donald Trump </p>
-                </div>
-            </div>
-            <div class="img">
-                <img src="/img/app_adoroCinema.webp" alt="">
-                <div class="card-texto">
-                    <p>Novo app do AdoroCinema</p>
-                </div>
-            </div> -->
         </section>
         <section id="filmes">
             <div class="barra-top"></div>
@@ -206,16 +188,84 @@
             </div>
             <div class="container-esperados">
                 <div class="estreia">
-                    <div class="bar-left"></div>
                     <div class="item-titulo">
+                        <div class="bar-left"></div>
                         <h3>Estreias da semana</h3>
                     </div>
-                    <div class="estreia-carousel">
-                        carousel -> imagem + nome dos filmes
-                    </div>
-                    <div class="btn">
-                        <button><a href="lancamentos">Todos os lançamentos</a></button>
-                    </div>
+                    <section class="carousel-estreia">
+                        <div class="container-estreias show1234">
+                            <div class="imagem slide1">
+                                <img src="/img/carouselEstreias/batalha.jpg" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Uma Batalha Ap...</p>
+                                    <p class="linha2">De Paul Thomas Ande...</p>
+                                </div>
+                            </div>
+                            <div class="imagem slide2">
+                                <img src="/img/carouselEstreias/estranhos.webp" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Os Estranhos: Ca...</p>
+                                    <p class="linha2">De Renny Harlin</p>
+                                </div>
+                            </div>
+                            <div class="imagem slide3">
+                                <img src="/img/carouselEstreias/kygo.jpg" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Kygo: Back at th...</p>
+                                    <p class="linha2">De Sam Wrench</p>
+                                </div>
+                            </div>
+                            <div class="imagem slide4">
+                                <img src="/img/carouselEstreias/Nezha2.jpg" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Ne Zha 2: O Rena...</p>
+                                    <p class="linha2">De Yu Yang</p>
+                                </div>
+                            </div>
+                            <div class="imagem slide5">
+                                <img src="/img/carouselEstreias/atosMoises.webp" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">3 Atos de Moisés</p>
+                                    <p class="linha2">De Diretor Desconheci...</p>
+                                </div>
+                            </div>
+                            <div class="imagem slide6">
+                                <img src="/img/carouselEstreias/misty.webp" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Misty: A História...</p>
+                                    <p class="linha2">De Georges Gachot </p>
+                                </div>
+                            </div>
+                            <div class="imagem slide7">
+                                <img src="/img/carouselEstreias/paraiso.jpg" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Paraíso em Cha...</p>
+                                    <p class="linha2">De Mika Gustafson</p>
+                                </div>
+                            </div>
+                            <div class="imagem slide8">
+                                <img src="/img/carouselEstreias/zoopocalipse.jpg" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Zoopocalipse - U...</p>
+                                    <p class="linha2">De Ricardo Curtis, Rodri...</p>
+                                </div>
+                            </div>
+                            <div class="imagem slide9">
+                                <img src="/img/carouselEstreias/parisTexas.jpg" alt="">
+                                <div class="nomeFilme">
+                                    <p class="linha1">Paris, Texas</p>
+                                    <p class="linha2">De Wim Wenders</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-prev">
+                            ❮ </button>
+                        <button class="btn-next"> ❯ </button>
+                        <div class="btn-lancamentos">
+                            <button><a href="lancamentos">Todos os lançamentos da semana</a></button>
+                        </div>
+                    </section>
+
                 </div>
 
                 <div class="cartaz">
@@ -223,8 +273,48 @@
                         <div class="bar-left"></div>
                         <h3>Em cartaz</h3>
                     </div>
-                    <div class="card">
-                        4 cards + nome do filme
+                    <div class="cartaz-card">
+                        <div class="card-cartaz">
+                            <div class="imgSombra">
+                                <img src="/img/cartaz/slayer.jpg" alt="">
+                                <h1 class="legenda">Sessões</h1>
+                            </div>
+                            <div class="cartazFilme">
+                                <p class="linha1">Damon Slayer: Ki...</p>
+                                <p class="linha2">De Haruo Sotozaki </p>
+                            </div>
+                        </div>
+                        <div class="card-cartaz">
+                            <div class="imgSombra">
+                                <img src="/img/cartaz/invocacao.webp" alt="">
+                                <h1 class="legenda">Sessões</h1>
+                            </div>
+                            <div class="cartazFilme">
+                                <p class="linha1">Invocação do Ma...</p>
+                                <p class="linha2">De Michael Chaves </p>
+                            </div>
+                        </div>
+                        <div class="card-cartaz">
+                            <div class="imgSombra">
+                                <img src="/img/cartaz/grandeViagem.jpg" alt="">
+                                <h1 class="legenda">Sessões</h1>
+                            </div>
+                            <div class="cartazFilme">
+                                <p class="linha1">A Grande Viage...</p>
+                                <p class="linha2">De Kogonada </p>
+                            </div>
+                        </div>
+                        <div class="card-cartaz">
+                            <div class="imgSombra">
+                                <img src="/img/cartaz/sogra.jpg" alt="">
+                                <h1 class="legenda">Sessões</h1>
+                            </div>
+
+                            <div class="cartazFilme">
+                                <p class="linha1">A Sogra Perfeita 2</p>
+                                <p class="linha2">De Cris D'Amato </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="btn">
                         <button><a href="filmesCartaz">Todos os filmes em cartaz</a></button>
@@ -396,8 +486,9 @@
         </section>
 
     </main>
-    <script src="script.js"></script>
-    <script src="carrossel.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/carrossel.js"></script>
+    <script src="/js/estreias.js"></script>
 </body>
 
 </html>

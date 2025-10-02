@@ -1,32 +1,27 @@
 .container-esperados {
     width: 68%;
-    border: 2px solid red;
     display: inline-flex;
     flex-direction: column;
 }
 
 .estreia {
     width: 100%;
-    border: 1px solid rgb(21, 19, 19);
 }
 
 .cartaz {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid blue;
 }
 
 .mais-esperados {
     width: 30%;
-    border: 2px solid red;
     display: inline-flex;
     flex-direction: column;
 }
 
 .esperados {    
     width: 100%;
-    border: 1px solid green;
 }
 
 .btn-esperados {
@@ -35,7 +30,6 @@
 }
 
 .item-titulo {
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -46,7 +40,7 @@
     height: 2rem;
     padding-left: 5px;
     font-family: "montserrat";
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 800;
 }
 

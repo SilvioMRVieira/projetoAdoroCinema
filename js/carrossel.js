@@ -18,10 +18,10 @@ function updateCarousel() {
     carousel.style.transform = `translateX(-${moveDistance}%)`;
 
     // Atualizar debug
-    document.getElementById('debugInfo').innerHTML =
-        `Posição atual: ${currentPosition} | Movendo: -${moveDistance.toFixed(1)}% | Max posição: ${maxPosition}`;
+    // document.getElementById('debugInfo').innerHTML =
+    //     `Posição atual: ${currentPosition} | Movendo: -${moveDistance.toFixed(1)}% | Max posição: ${maxPosition}`;
 
-    console.log(`Moveu para posição ${currentPosition} (${-moveDistance.toFixed(1)}%)`);
+    // console.log(`Moveu para posição ${currentPosition} (${-moveDistance.toFixed(1)}%)`);
 }
 
 // NAVEGAÇÃO COM SETAS
