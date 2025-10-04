@@ -1,52 +1,107 @@
 .container-esperados {
-    width: 68%;
-    display: inline-flex;
-    flex-direction: column;
+  width: 65%;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .estreia {
-    width: 100%;
+    margin-top: 6%;
+  width: 100%;
 }
 
 .cartaz {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.esperados-lista {
+  display: flex;
+  width: 100%;
 }
 
 .mais-esperados {
-    width: 30%;
-    display: inline-flex;
-    flex-direction: column;
+  width: 34%;
+  display: inline-flex;
+  flex-direction: column;
 }
 
-.esperados {    
-    width: 100%;
+.esperados {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.esperados p {
+  text-shadow: none;
+  text-align: start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: gray;
+}
+
+.esperados-lista ul {
+  margin-left: -30px;
+  position: relative;
+  text-align: start;
+  width: 100vw;
+}
+
+.esperados-lista li {
+  width: 330px;
+  height: 7vh;
+  align-content: center;
+  font-weight: bold;
+  border-top: 0.5px solid rgb(231, 227, 227);
+}
+
+.esperados-lista li a {
+    color: #000;
 }
 
 .btn-esperados {
-    width: 100%;
-    border: 1px solid rgb(124, 52, 114);
+  width: 100%;
+}
+
+.imgEsperados img {
+  width: 35%;
+  border-radius: 10px;
+}
+
+.imgEsperados p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: bold;
 }
 
 .item-titulo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .item-titulo h3 {
-    margin: 0 0 2px 0;
-    height: 2rem;
-    padding-left: 5px;
-    font-family: "montserrat";
-    font-size: 1.7rem;
-    font-weight: 800;
+  margin: 0 0 2px 0;
+  height: 2rem;
+  padding-left: 5px;
+  font-family: "montserrat";
+  font-size: 1.7rem;
+  font-weight: 800;
 }
 
 .bar-left {
-    border-radius: 20px;
-    height: 1.4rem;
-    border: 3px solid gold;
+  border-radius: 20px;
+  height: 1.4rem;
+  border: 3px solid gold;
 }
 
+.card-pesquisa {
+    display: flex;
+    width: 100%;
+}
+
+.card-pesquisa img {
+    border-radius: 20px;
+    margin: 2%;
+}
