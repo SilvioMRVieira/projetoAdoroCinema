@@ -198,7 +198,7 @@ li, a {
     margin-top: 3px;
     display: none;
     position: absolute;
-    right: 0;
+    right: 3%;
     left: auto;
     background-color: #fff;
     min-width: 250px;
@@ -218,10 +218,7 @@ li, a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     text-align: center;
     font-weight: 600;
 }
@@ -409,7 +406,7 @@ h4, p {
     text-align: end;
 }
 
-.dropdown-content a{
+.dropdown-lista .dropdown-content a{
     font-size: 12px;
     width: 100%;
     color:#000;
@@ -421,7 +418,7 @@ h4, p {
     padding: 5px 10px;
 }
 
-.dropdown-content a:hover {
+.dropdown-lista .dropdown-content a:hover {
   color: #1E74B7;
   background-color: #fff;
 }
