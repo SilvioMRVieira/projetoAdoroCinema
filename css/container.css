@@ -143,7 +143,10 @@
   font-weight: 500;
 }
 
-span {
+.estrelas {
+  position: absolute;
   font-size: 26px;
   color: gold;
+  margin-top: -20px;
+  margin-left: -50px;
 }

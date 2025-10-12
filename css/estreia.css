@@ -172,11 +172,21 @@
   margin-right: 35%;
 }
 
+.btn-criticas button {
+  width: 30%;
+  height: 6vh;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-top: 3%;
+}
+
 .btn-lancamentos button:hover,
 .btn-cartaz button:hover,
 .btn-esperados button:hover,
 .btn-ultimas button:hover,
-.btn-trailers button:hover  {
+.btn-trailers button:hover,
+.btn-criticas button:hover  {
   background-color: rgb(236, 236, 234);
 }
 
@@ -184,7 +194,8 @@
 .btn-cartaz a,
 .btn-esperados a,
 .btn-ultimas a,
-.btn-trailers a {
+.btn-trailers a,
+.btn-criticas a {
   color: #000;
   font-size: 0.8rem;
   font-weight: bold;
