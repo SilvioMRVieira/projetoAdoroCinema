@@ -72,8 +72,8 @@
 
 .grid-item-three {
   grid-area: grid-three;
-  border: 1px solid black;
   background-color: rgb(65, 9, 50);
+  animation: mkt 5s ease 1s infinite;
 }
 
 .play-button-circle {
@@ -95,7 +95,6 @@
 
 .play-button-circle:hover {
   background: rgba(0, 0, 0, 0.8);
-
 }
 
 .play-button-circle::after {
@@ -118,3 +117,16 @@
   margin-left: 4px;
 }
 
+@keyframes mkt {
+  from,
+  to {
+    background: url(/img/propaganda/ad1.webp);
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background: url(/img/propaganda/ad2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}

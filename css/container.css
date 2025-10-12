@@ -106,3 +106,44 @@
   border-radius: 20px;
   margin: 2%;
 }
+
+.ultimas-criticas {
+  margin-top: 5%;  
+}
+
+.card-criticas {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-criticas img {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.img-criticas:hover .card-title {
+  color: rgb(64, 64, 229);
+}
+
+.card-title {
+  text-shadow: none;
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: rgb(64, 64, 229);
+}
+
+.direcao {
+  color: gray;
+  font-size: 0.75rem;
+  text-shadow: none;
+  font-weight: 500;
+}
+
+span {
+  font-size: 26px;
+  color: gold;
+}
