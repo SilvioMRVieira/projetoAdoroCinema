@@ -130,3 +130,72 @@
     background-position: center;
   }
 }
+
+/* Streaming */
+
+.logo-streaming {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.logo-nome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+.logo-nome img {
+  margin-top: 0;
+  width: 70px;
+  height: 70px;
+}
+
+.logo-nome p {
+  text-shadow: none;
+  font-size: 0.8rem;
+}
+
+.grid-streaming {
+  margin: 8px 0;
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 62% 35%;
+  grid-template-rows: 60vh 30vh 30vh 30vh;
+  grid-template-areas:
+    "grid-stm1 grid-stm3"
+    "grid-stm2 grid-stm3"
+    "grid-stm4 grid-stm4"
+    "grid-stm5 grid-stm5";
+  gap: 10px;
+  justify-content: center;
+}
+
+.grid-stm1 {
+  grid-area: grid-stm1;
+  background-color: blue;
+}
+
+.grid-stm2 {
+  grid-area: grid-stm2;
+  background-color: rgb(167, 20, 62);
+}
+
+.grid-stm3 {
+  grid-area: grid-stm3;
+  background-color: rgb(31, 171, 40);
+}
+
+.grid-stm4 {
+  grid-area: grid-stm4;
+  background-color: rgb(196, 202, 35);
+}
+
+.grid-stm5 {
+  grid-area: grid-stm5;
+  background-color: rgb(129, 158, 226);
+}

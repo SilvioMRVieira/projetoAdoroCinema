@@ -312,12 +312,26 @@ h4, p {
   border-radius: 20px;
 }
 
+.titulo-filmes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .titulo-filmes h1{
   display: inline-block;
   margin-top: 8px;
   font-size: 3rem;
   font-family: "montserrat";
   font-weight: 800;
+}
+
+.titulo-filmes p {
+  text-shadow: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
 }
 
 .titulo-filmes h1:hover {
