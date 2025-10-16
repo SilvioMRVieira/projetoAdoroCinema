@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+include_once 'connect.php';
+
+// Condição para checar se há usuario logado e com sessão ativa
+// if (!isset($_SESSION['email'])) {
+//     echo "<h1>Acesso negado. Faça login primeiro.</h1><br>";
+//     echo "<p><a href='/coude-23/Projetos/adoroCinema/logout.php'>Sair</a></p>";
+
+//     exit;
+// }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,15 +20,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/container.css">
-    <link rel="stylesheet" href="/css/carrossel.css">
+    <link rel="stylesheet" href="css/carrossel.css">
     <link rel="stylesheet" href="css/estreia.css">
-    <link rel="stylesheet" href="/css/esperados.css">
-    <link rel="stylesheet" href="/css/noticias.css">
-    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="css/grid.css">
     <title>Adoro Cinema</title>
     <link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
@@ -24,7 +36,7 @@
     <header>
         <div class="logoBusca">
             <div class="logo">
-                <a href="index.html"><img src="/img/adorocinema.png" alt="logoAdoroCinema"></a>
+                <a href="index.html"><img src="img/adorocinema.png" alt="logoAdoroCinema"></a>
             </div>
             <div class="busca">
                 <div class="container">
@@ -39,6 +51,7 @@
                 </div>
             </div>
         </div>
+
     </header>
 
     <div class="nav-texto">
@@ -54,10 +67,15 @@
                 <li><a href="novelas">NOVELAS</a></li>
             </ul>
             <ul class="dropdown">
-                <li><a class="minha-conta" href="minhaConta">MINHA CONTA</a></li>
+                <li>
+
+                </li>
+                <li><a class="minha-conta" href="minhaConta">
+                        <?php echo " " . $_SESSION['nome_usuario']; ?>
+                    </a></li>
                 <div class="dropdown-content login">
-                    <a href="#">CONECTAR</a>
-                    <a class="criar-conta" href="#">CRIAR UMA CONTA</a>
+                    <a href="logout.php">SAIR</a>
+                    <!-- <a class="criar-conta" href="cadUser.html">CRIAR UMA CONTA</a> -->
                 </div>
             </ul>
         </nav>
@@ -80,21 +98,21 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/img/Gambit.webp" class="d-block w-100" alt="...">
+                        <img src="img/Gambit.webp" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h4>"Odeio envelhecer"</h4>
                             <p>Ator da Marvel se machuca nas gravações de Vingadores 5.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="/img/homem-aranha.webp" class="d-block w-100" alt="...">
+                        <img src="img/homem-aranha.webp" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h4>Homem-Aranha, Thanos e Feiticeira Escarlate?</h4>
                             <p>Série para maiores da Marvel promove grande encontro de heróis e vilões.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="/img/Wandinha.webp" class="d-block w-100" alt="...">
+                        <img src="img/Wandinha.webp" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h4>Lady Gaga está em Wandinha!</h4>
                             <p>Como é a participação da cantora na série da Netflix?</p>
@@ -118,26 +136,26 @@
             <div class="carousel-container">
                 <div class="carousel" id="carousel">
                     <div class="carousel-slide slide1">
-                        <img src="/img/odeio-cinema.jpg" alt="">
+                        <img src="img/odeio-cinema.jpg" alt="">
                         <div class="card-texto">
                             <p>Quais são as teorias mais bizarras sobre filmes?
                                 Confira o debate no OdeioCinema!</p>
                         </div>
                     </div>
                     <div class="carousel-slide slide2">
-                        <img src="/img/allen_trump.jpg" alt="">
+                        <img src="img/allen_trump.jpg" alt="">
                         <div class="card-texto">
                             <p>Woody Allen gostaria de dirigir Donald Trump </p>
                         </div>
                     </div>
                     <div class="carousel-slide slide3">
-                        <img src="/img/monstro.jpg" alt="">
+                        <img src="img/monstro.jpg" alt="">
                         <div class="card-texto">
                             <p>Compare o serial killer de Monstro: A História de Ed Gein com o assasino real</p>
                         </div>
                     </div>
                     <div class="carousel-slide slide4">
-                        <img src="/img/app_adoroCinema.webp" alt="">
+                        <img src="img/app_adoroCinema.webp" alt="">
                         <div class="card-texto">
                             <p>Novo app do AdoroCinema</p>
                         </div>
@@ -199,7 +217,7 @@
                         <div class="container-estreias show1234">
                             <div class="imagem slide1">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/batalha.jpg" alt="">
+                                    <img src="img/carouselEstreias/batalha.jpg" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -209,7 +227,7 @@
                             </div>
                             <div class="imagem slide2">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/estranhos.webp" alt="">
+                                    <img src="img/carouselEstreias/estranhos.webp" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -219,7 +237,7 @@
                             </div>
                             <div class="imagem slide3">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/kygo.jpg" alt="">
+                                    <img src="img/carouselEstreias/kygo.jpg" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -229,7 +247,7 @@
                             </div>
                             <div class="imagem slide4">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/Nezha2.jpg" alt="">
+                                    <img src="img/carouselEstreias/Nezha2.jpg" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -239,7 +257,7 @@
                             </div>
                             <div class="imagem slide5">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/atosMoises.webp" alt="">
+                                    <img src="img/carouselEstreias/atosMoises.webp" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -249,7 +267,7 @@
                             </div>
                             <div class="imagem slide6">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/misty.webp" alt="">
+                                    <img src="img/carouselEstreias/misty.webp" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -259,7 +277,7 @@
                             </div>
                             <div class="imagem slide7">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/paraiso.jpg" alt="">
+                                    <img src="img/carouselEstreias/paraiso.jpg" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -269,7 +287,7 @@
                             </div>
                             <div class="imagem slide8">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/zoopocalipse.jpg" alt="">
+                                    <img src="img/carouselEstreias/zoopocalipse.jpg" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -279,7 +297,7 @@
                             </div>
                             <div class="imagem slide9">
                                 <div class="cardImagem">
-                                    <img src="/img/carouselEstreias/parisTexas.jpg" alt="">
+                                    <img src="img/carouselEstreias/parisTexas.jpg" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
@@ -306,7 +324,7 @@
                     <div class="cartaz-card">
                         <div class="card-cartaz">
                             <div class="imgSombra">
-                                <img src="/img/cartaz/slayer.jpg" alt="">
+                                <img src="img/cartaz/slayer.jpg" alt="">
                                 <h1 class="legenda">Sessões</h1>
                             </div>
                             <div class="cartazFilme">
@@ -316,7 +334,7 @@
                         </div>
                         <div class="card-cartaz">
                             <div class="imgSombra">
-                                <img src="/img/cartaz/invocacao.webp" alt="">
+                                <img src="img/cartaz/invocacao.webp" alt="">
                                 <h1 class="legenda">Sessões</h1>
                             </div>
                             <div class="cartazFilme">
@@ -326,7 +344,7 @@
                         </div>
                         <div class="card-cartaz">
                             <div class="imgSombra">
-                                <img src="/img/cartaz/grandeViagem.jpg" alt="">
+                                <img src="img/cartaz/grandeViagem.jpg" alt="">
                                 <h1 class="legenda">Sessões</h1>
                             </div>
                             <div class="cartazFilme">
@@ -336,7 +354,7 @@
                         </div>
                         <div class="card-cartaz">
                             <div class="imgSombra">
-                                <img src="/img/cartaz/sogra.jpg" alt="">
+                                <img src="img/cartaz/sogra.jpg" alt="">
                                 <h1 class="legenda">Sessões</h1>
                             </div>
 
@@ -360,7 +378,7 @@
                     </div>
                     <p>Os lançamentos mais aguardados</p>
                     <div class="imgEsperados">
-                        <img src="/img/esperados/seNaoFosseVoce.jpg" alt="">
+                        <img src="img/esperados/seNaoFosseVoce.jpg" alt="">
                         <p>Se Não Fosse Você</p>
                     </div>
                     <div class="esperados-lista">
@@ -385,7 +403,7 @@
 
             <div class="card-pesquisa">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ_V048RhWrMWi9RLJmDKKbIioTSBKyyyDq5p3xcOOXmKMbQ/viewform"
-                    target="_blank"><img src="/img/esperados/25anos.webp" alt=""></a>
+                    target="_blank"><img src="img/esperados/25anos.webp" alt=""></a>
             </div>
             <div class="ultimas-noticias">
                 <div class="item-titulo">
@@ -394,21 +412,21 @@
                 </div>
                 <div class="ultimas-um">
                     <div class="noticias">
-                        <img src="/img/noticias/olharMisterioso.jpeg" alt="">
+                        <img src="img/noticias/olharMisterioso.jpeg" alt="">
                         <p class="texto-noticia">NOTÍCIAS - Festivais e Premiações</p>
                         <p class="texto-descricao">Festival do Rio 2025: 5 filmes LGBTQIAP+ que serão exibidos durante o
                             grande evento carioca</p>
                         <p class="data">segunda, 13 de outubro de 2025</p>
                     </div>
                     <div class="noticias">
-                        <img src="/img/noticias/frankstein.jpeg" alt="">
+                        <img src="img/noticias/frankstein.jpeg" alt="">
                         <p class="texto-noticia">NOTÍCIAS - Lançamentos</p>
                         <p class="texto-descricao">Irreconhecível! Trailer final de Frankenstein revela visual de Jacob
                             Elordi como a criatura do filme de terror de Guillermo del Toro</p>
                         <p class="data">segunda, 13 de outubro de 2025</p>
                     </div>
                     <div class="noticias">
-                        <img src="/img/noticias/lucicreide.jpeg" alt="">
+                        <img src="img/noticias/lucicreide.jpeg" alt="">
                         <p class="texto-noticia">NOTÍCIAS - Visto na Web</p>
                         <p class="texto-descricao">Qual é o filme da Sessão da Tarde hoje(01/10)? Lucicreide Vai Pra
                             Marte tem uma conexão inesperada com Tom Cruise</p>
@@ -417,21 +435,21 @@
                 </div>
                 <div class="ultimas-dois">
                     <div class="noticias">
-                        <img src="/img/noticias/gattaca.jpeg" alt="">
+                        <img src="img/noticias/gattaca.jpeg" alt="">
                         <p class="texto-noticia">NOTÍCIAS - Visto na Web</p>
                         <p class="texto-descricao">Todo fã de ficção científica já deve ter visto este filme sobre uma
                             visão aterrorizante do futuro: Está no streaming!</p>
                         <p class="data">segunda, 13 de outubro de 2025</p>
                     </div>
                     <div class="noticias">
-                        <img src="/img/noticias/outron.jpeg" alt="">
+                        <img src="img/noticias/outron.jpeg" alt="">
                         <p class="texto-noticia">NOTÍCIAS - Visto na Web</p>
                         <p class="texto-descricao">Agora no streaming: Um dos melhores filmes dos últimos anos que
                             poucos viram</p>
                         <p class="data">segunda, 13 de outubro de 2025</p>
                     </div>
                     <div class="noticias">
-                        <img src="/img/noticias/thor.jpeg" alt="">
+                        <img src="img/noticias/thor.jpeg" alt="">
                         <p class="texto-noticia">NOTÍCIAS - Personalidades</p>
                         <p class="texto-descricao">Todos os três filhos de Chris Hemsworth apareceram no último filme do
                             Thor: Você os reconheceu?</p>
@@ -463,12 +481,12 @@
                                 <div class="grid-item-two">
                                     <div class="card-trailers">
                                         <div class="card-trailer">
-                                            <img src="/img/trailers/gladiador.jpg" alt="">
+                                            <img src="img/trailers/gladiador.jpg" alt="">
                                             <div class="play-button-circle"></div>
                                             <p>Gladiador 2 Trailer...</p>
                                         </div>
                                         <div class="card-trailer">
-                                            <img src="/img/trailers/cinza.webp" alt="">
+                                            <img src="img/trailers/cinza.webp" alt="">
                                             <div class="play-button-circle"></div>
                                             <p>Cinquenta Tons De...</p>
                                         </div>
@@ -591,10 +609,35 @@
                             <h3>Trailers de streamings</h3>
                         </div>
                         <div class="trailer">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wVqwoGwmR_I?si=55JUN9EfZhvO4ibz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="660" height="350"
+                                src="https://www.youtube.com/embed/wVqwoGwmR_I?si=55JUN9EfZhvO4ibz"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="grid-stm2"></div>
+                    <div class="grid-stm2">
+                        <div class="card-stm">
+                            <img src="img/streaming/mulherCabine.webp" alt="">
+                            <div class="play-button-circle"></div>
+                            <p>Mulher na Cabin...</p>
+                        </div>
+                        <div class="card-stm">
+                            <img src="img/streaming/gladiador2.jpg" alt="">
+                            <div class="play-button-circle"></div>
+                            <p>Gladiador 2 Trailer...</p>
+                        </div>
+                        <div class="card-stm">
+                            <img src="img/streaming/steve.jpg" alt="">
+                            <div class="play-button-circle"></div>
+                            <p>Steve Trailer Dubla...</p>
+                        </div>
+                        <div class="card-stm">
+                            <img src="img/streaming/babygirl.webp" alt="">
+                            <div class="play-button-circle"></div>
+                            <p>Babygirl Trailer Ori...</p>
+                        </div>
+                    </div>
                     <div class="grid-stm3"></div>
                     <div class="grid-stm4"></div>
                     <div class="grid-stm5"></div>
@@ -607,9 +650,9 @@
         </section>
 
     </main>
-    <script src="/js/script.js"></script>
-    <script src="/js/carrossel.js"></script>
-    <script src="/js/estreias.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/carrossel.js"></script>
+    <script src="js/estreias.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Cadastro Usuário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-img">
+            <img src="../Projeto01/img/coudew.png" alt="">
+        </div>
+        <div class="form_user">
+            <form action="cadastrarUser.php" method="post">
+                <div class="form-header">
+                    <div class="title">
+                        <!-- Formulário para cadastro de usuários -->
+                        <h1>Cadastro de Usuário</h1>
+                    </div>
+                    <div class="cad-button">
+                        <input type="submit" value="Cadastrar">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" pattern="\d{3}.\d{3}.\d{3}-\d{2}"
+                            title="Formato: XXX.XXX.XXX-XX" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" placeholder="Digite seu e-mail" pattern="[^@]+@[^@]+\.[^@]+"
+                            title="Por favor, insira um endereço de email válido (ex: email@dominio.com)" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" pattern="\d{8}" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <div class="nivel">
+                    <div class="nivel-title">
+                        <h6>Nível</h6>
+                    </div>
+                    <div class="nivel-group">
+                        <div class="nivel-input">
+                            <input type="radio" name="nivel" id="" value="professor" required>
+                            <label for="nivel">Professor</label>
+                        </div>
+
+                        <div class="nivel-input">
+                            <input type="radio" name="nivel" id="" value="aluno" required>
+                            <label for="nivel">Aluno</label>
+                        </div>
+
+                        <div class="nivel-input">
+                            <input type="radio" name="nivel" id="" value="secretaria" required>
+                            <label for="nivel">Secretaria</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Retorna para a tela de login -->
+            <div class="cad-button-voltar">
+                <button class="voltar"><a class="button"
+                        href="/coude-23/Projetos/Projeto01/Login.php">Voltar</a></button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

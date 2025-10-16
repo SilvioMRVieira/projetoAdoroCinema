@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url('/img/guarana.png');
+    background-image: url(../img/guarana.png);
     background-size: 100%;
     background-attachment: fixed;
     font-family: "montserrat";
@@ -159,6 +159,10 @@ li, a {
     text-decoration: none;
 }
 
+.login-user {
+  color: #000;
+}
+
 .nav-links, ul {
     list-style: none;
     margin-right: 35px;
@@ -191,6 +195,11 @@ li, a {
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+.dropdown li {
+  display: flex;
+  color: blue;
 }
 
 /* Conteúdo do Dropdown (Oculto por padrão) */
