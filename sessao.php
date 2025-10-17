@@ -15,14 +15,14 @@ if ($result->num_rows > 0) { //processa o result enquanto a quantidade de linhas
 
     $conta = $users['email'];
     $pass = $users['senha'];
-    // $level = $users['nivel'];
+    $level = $users['nivel'];
     $nome = $users['nome_usuario'];
 
     $email = $_POST['email'];
     $senha = $_POST['senha'];  
 
     // verifica se os dados enviados pelo formulário com o método post estão de acordo com os registros do banco de dados da tabela usuários
-    if ($conta === $email && $pass === $senha) { //verificação de usuario
+    if ($conta === $email && $pass === $senha && $level === 'usuario') { //verificação de usuario
       // cria a session
       $_SESSION['email'] = $email;
       $_SESSION['senha'] = $senha;
@@ -33,13 +33,13 @@ if ($result->num_rows > 0) { //processa o result enquanto a quantidade de linhas
       header(header: 'location: index.php'); //carrega o portal
       exit;
     } 
-    if ($conta === $email && $pass === $senha) { //verificação de usuario
+    if ($conta === $email && $pass === $senha && $level === 'gestor') { //verificação de usuario
       // cria a session
       $_SESSION['email'] = $email;
       $_SESSION['senha'] = $senha;
       $_SESSION['nome_usuario'] = $nome;
 
-      header(header: 'location: index2.html'); //carrega o portal
+      header(header: 'location: dashboard.php'); //carrega o portal
       exit;
     } 
     if ($conta === $email && $pass === $senha) { //verificação de usuario

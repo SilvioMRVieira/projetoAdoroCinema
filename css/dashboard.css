@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #fff;
+}
+
+.container-grid {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 15% 84%;
+  grid-template-areas:
+    "header header "
+    "aside main";
+  gap: 5px;
+  justify-content: center;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #fff 0%, #dc2026 100%);
+  border-radius: 5px;
+}
+
+header h3 {
+  display: inline-block;
+}
+
+.icon i {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.icon i:hover {
+  color: #fff;
+  transform: scale(1.15);
+  transition: all 0.3s ease;
+}
+
+.group-icon {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-dash img {
+  width: 60%;
+}
+
+.user-dash h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header button {
+  padding: 10px 25px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  background: #fff;
+}
+
+header button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header button:hover a {
+  color: #667eea;
+}
+
+/* aside */
+
+aside {
+  grid-area: aside;
+  min-height: 100vh;
+  padding: 30px 15px;
+  border-radius: 5px;
+  width: 100%;
+  background: #fff;
+  min-height: 100vh;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05), 4px 0 10px rgba(255, 0, 234, 0.1),
+    6px 0 20px rgba(255, 0, 234, 0.05);
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside ul li {
+  padding: 15px 10px;
+  margin: 8px 0;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+aside ul a {
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+aside ul li:hover {
+  background: linear-gradient(135deg, #514e4e 0%, #dc2026 100%);
+  color: #fff;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+main {
+  width: 100%;
+  grid-area: main;
+}
+
+.btn-filmes {
+    width: 100%;
+    padding: 10px 30px;
+    color: #dc2026;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 0.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-filmes:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(255, 126, 234, 0.4);
+}
+
+.btn-filmes:active {
+    transform: translateY(0);
+}
+
+.welcome {
+  position: relative;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto;
+  padding: 1%;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(255, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(255, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+.welcome h1,
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #c6262c;
+}
+
+.welcome img {
+  visibility: hidden;
+  margin-top: 2%;
+  width: 20%;
+  animation: camera 2s ease-in-out 500ms 1;
+  transition: 2s;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table thead {
+  background: linear-gradient(135deg, #514e4e 0%, #dc2026 100%);
+}
+
+table thead tr th {
+  padding: 18px 15px;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table tbody tr:hover {
+  background: #f8f9ff;
+  transform: scale(1.01);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.1);
+}
+
+table tbody tr td {
+  padding: 15px;
+  color: #333;
+  font-size: 14px;
+}
+
+table tbody tr:last-child {
+  border-bottom: none;
+}
+
+@keyframes camera {
+  from {
+    visibility: visible;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+    visibility: visible;
+  }
+  
+}
