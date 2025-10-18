@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $sql);
                                 // echo "<td>" . $filme['arquivo'] . "</td>";
                                 echo "<td>" . $filme['diretor'] . "</td>";
                                 echo "<td>" . $filme['sinopse'] . "</td>";
-                                echo "<td> <a style='color: #dc2026;' href='#' ><i class='fa-regular fa-pen-to-square'></i></a>
+                                echo "<td> <a style='color: #dc2026;' href='editarFilme.php?id_filme=$filme[id_filme];' ><i class='fa-regular fa-pen-to-square'></i></a>
                                 <a style='color: #dc2026;' href='#'><i class='fa-regular fa-trash-can'></i></a> </td>";
                                 ?>
                             <?php
