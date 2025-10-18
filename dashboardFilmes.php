@@ -50,20 +50,21 @@ $result = mysqli_query($conn, $sql);
                     <li>Séries</li>
                 </a>
             </ul>
+
         </aside>
         <main>
             <section>
                 <div>
-                    <button class="btn-filmes">Cadastrar Filme</button>
+                    <a href="cadFilme.html"><button class="btn-filmes">Cadastrar Filme</button></a>
                 </div>
 
                 <div class="tabela">
                     <table>
                         <thead>
                             <tr>
+                                <th>Cartaz</th>
                                 <th>ID</th>
                                 <th>Nome</th>
-                                <th>Arquivo</th>
                                 <th>Diretor</th>
                                 <th>Sinopse</th>
                                 <th>Editar</th>
@@ -74,12 +75,16 @@ $result = mysqli_query($conn, $sql);
                             <?php
                             while ($filme = mysqli_fetch_assoc($result)) { //montando array associativo
                             ?>
+
                             <?php echo "<tr>";
+                                echo "<td><img style='width: 70px;' src=" . $filme['imagem'] . " alt=''></td>";
                                 echo "<td>" . $filme['id_filme'] . "</td>";
-                                echo "<td>" . $filme['nome_filme'] . "</td>"; 
-                                echo "<td>" . $filme['arquivo'] . "</td>";
+                                echo "<td>" . $filme['nome_filme'] . "</td>";
+                                // echo "<td>" . $filme['arquivo'] . "</td>";
                                 echo "<td>" . $filme['diretor'] . "</td>";
                                 echo "<td>" . $filme['sinopse'] . "</td>";
+                                echo "<td> <a style='color: #dc2026;' href='#' ><i class='fa-regular fa-pen-to-square'></i></a>
+                                <a style='color: #dc2026;' href='#'><i class='fa-regular fa-trash-can'></i></a> </td>";
                                 ?>
                             <?php
                             };
@@ -89,6 +94,7 @@ $result = mysqli_query($conn, $sql);
                     </table>
 
                 </div>
+
             </section>
 
         </main>

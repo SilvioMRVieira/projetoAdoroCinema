@@ -1,3 +1,33 @@
+<?php
+include_once 'connect.php';
+// Capturando dados do formulário de cadastro de usuário
+$nome = $_POST['nome'];
+$arquivo = $_FILES['arquivo'];
+$trailer = $_POST['trailer'];
+$diretor = $_POST['diretor'];
+$sinopse = $_POST['sinopse'];
+
+$pasta = "img/";
+
+$imagem = $arquivo['name'];
+$novoarquivo = uniqid('filme');
+
+$extensao = strtolower(PATHINFO($imagem, PATHINFO_EXTENSION));
+
+$path = $pasta . $novoarquivo . "." . $extensao;
+
+$enviar = move_uploaded_file($arquivo["tmp_name"], $path);
+
+// Query para inserir os dados de cadastro de usuário no banco de dados(BD)
+$sql = "INSERT INTO filmes (nome_filme, arquivo, trailer, imagem, diretor, sinopse) VALUES (?, ?, ?, ?, ?, ?)";
+/*Instrução statement para preparar, carregar e executar o registro no BD  */
+$stmt = $conn->prepare($sql);
+$stmt->bind_param('ssssss', $nome, $novoarquivo, $trailer, $path, $diretor, $sinopse);
+$stmt->execute();
+/* Fecha o statement e a conexão com o BD */
+$stmt->close();
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -64,19 +94,13 @@
                     <a href="adoroCinema.html"><img src="img/adorocinema.png" alt="adorocinema"></a>
                 </div>
                 <div class="boas-vindas">
-                    <h1>cadastro de filme</h1>
-                </div>                
-                <form enctype="multipart/form-data" action="cadastrarFilme.php" method="post">
-                    <input type="text" name="nome" id="" placeholder="NOME DO FILME">
-                    <input type="file" name="arquivo" placeholder="ARQUIVO">
-                    <input type="text" name="trailer" id="" placeholder="TRAILER DO FILME">
-                    <input type="text" name="diretor" placeholder="NOME DO DIRETOR">
-                    <input type="text" name="sinopse" placeholder="SINOPSE">
-                    <button type="submit">Cadastrar</button>
-                </form>
+                    <h1>Filme cadastrado com sucesso!</h1>
+                    <p>Verifique as informações do mais novo conteúdo do adoroCinema.</p>
+                </div>
+
                 <div class="termos">
-                    <p></p>
-                    <p class="entrar">Lista de filmes <a href="dashboardFilmes.php"><span>Entre</span></a></p>
+                    <p class="entrar">Continuar a cadastrar! <a href="dashboardFilmes.php"><span>Voltar</span></a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -85,3 +109,23 @@
 </body>
 
 </html>
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stilus.css">
+    <title>Cadastrado</title>
+</head>
+
+<body>
+    <div id="msgCadastro">
+        <h1>Usuário(a)
+            <?php echo $nome ?> cadastrado com sucesso!</h1>
+        <a href="adoroCinema.html"><button class="msgCad">Voltar</button></a>
+    </div>
+
+</body>
+
+</html> -->

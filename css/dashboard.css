@@ -21,6 +21,10 @@ body {
 }
 
 header {
+    width: 95%;
+    margin: 0 auto;
+  position: sticky;
+  top: 1%;
   grid-area: header;
   display: flex;
   justify-content: space-between;
@@ -29,6 +33,7 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background: linear-gradient(135deg, #fff 0%, #dc2026 100%);
   border-radius: 5px;
+  z-index: 2;
 }
 
 header h3 {
@@ -92,13 +97,15 @@ header button:hover a {
 /* aside */
 
 aside {
+  position: fixed;
+  top: 25%;
+  left: 2%;
   grid-area: aside;
-  min-height: 100vh;
+  height: 50vh;
   padding: 30px 15px;
   border-radius: 5px;
-  width: 100%;
+  width: auto;
   background: #fff;
-  min-height: 100vh;
   border-right: 1px solid #e0e0e0;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05), 4px 0 10px rgba(255, 0, 234, 0.1),
     6px 0 20px rgba(255, 0, 234, 0.05);
@@ -134,33 +141,36 @@ aside ul li:hover {
 }
 
 main {
-  width: 100%;
+  position: relative;
+  top: 3%;
+  width: 97%;
   grid-area: main;
 }
 
 .btn-filmes {
-    width: 100%;
-    padding: 10px 30px;
-    color: #dc2026;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 0.5%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  top: -10px;
+  width: 100%;
+  padding: 10px 20px;
+  color: #dc2026;
+  border: 2px solid #dc2026;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .btn-filmes:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 25px rgba(255, 126, 234, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(255, 126, 234, 0.4);
 }
 
 .btn-filmes:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .welcome {
@@ -250,5 +260,4 @@ table tbody tr:last-child {
     transform: scale(0.8);
     visibility: visible;
   }
-  
 }

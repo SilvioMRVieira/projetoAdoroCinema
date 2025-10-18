@@ -62,7 +62,7 @@ $result = mysqli_query($conn, $sql);
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Senha</th>
-                                <th>Nivel</th>
+                                <th>Nível</th>
                                 <th>Editar</th>
                             </tr>
                         </thead>
@@ -76,12 +76,15 @@ $result = mysqli_query($conn, $sql);
                                 echo "<td>" . $user['email'] . "</td>";
                                 echo "<td>" . $user['senha'] . "</td>";
                                 echo "<td>" . $user['nivel'] . "</td>";
+                                echo "<td> <a style='color: #dc2026;' href='#' ><i class='fa-regular fa-pen-to-square'></i></a>
+                                <a style='color: #dc2026;' href='#'><i class='fa-regular fa-trash-can'></i></a> </td>";
 
                                 ?>
                             <?php
                             };
 
                             ?>
+
 
                         </tbody>
                     </table>
