@@ -114,17 +114,53 @@ $result = mysqli_query($conn, $sql);
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/homem-aranha.webp" class="d-block w-100" alt="...">
+                        <img src="   <?php
+                                        $sql = "SELECT * FROM filmes where id_filme = 5"; //Select na tabela de alunos
+                                        $result = mysqli_query($conn, $sql);
+                                        while ($filme = mysqli_fetch_assoc($result)) {
+                                            echo $filme['imagem'];
+                                        }
+                                        ?>" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h4>Homem-Aranha, Thanos e Feiticeira Escarlate?</h4>
-                            <p>Série para maiores da Marvel promove grande encontro de heróis e vilões.</p>
+                            <h4>"<?php
+                                    $sql = "SELECT * FROM filmes where id_filme = 5"; //Select na tabela de alunos
+                                    $result = mysqli_query($conn, $sql);
+                                    while ($filme = mysqli_fetch_assoc($result)) {
+                                        echo $filme['nome_filme'];
+                                    }
+                                    ?>"</h4>
+                            <p><?php
+                                $sql = "SELECT * FROM filmes where id_filme = 5"; //Select na tabela de alunos
+                                $result = mysqli_query($conn, $sql);
+                                while ($filme = mysqli_fetch_assoc($result)) {
+                                    echo $filme['sinopse'];
+                                }
+                                ?></p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/Wandinha.webp" class="d-block w-100" alt="...">
+                        <img src="   <?php
+                                        $sql = "SELECT * FROM filmes where id_filme = 1"; //Select na tabela de alunos
+                                        $result = mysqli_query($conn, $sql);
+                                        while ($filme = mysqli_fetch_assoc($result)) {
+                                            echo $filme['imagem'];
+                                        }
+                                        ?>" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h4>Lady Gaga está em Wandinha!</h4>
-                            <p>Como é a participação da cantora na série da Netflix?</p>
+                            <h4>"<?php
+                                    $sql = "SELECT * FROM filmes where id_filme = 1"; //Select na tabela de alunos
+                                    $result = mysqli_query($conn, $sql);
+                                    while ($filme = mysqli_fetch_assoc($result)) {
+                                        echo $filme['nome_filme'];
+                                    }
+                                    ?>"</h4>
+                            <p><?php
+                                $sql = "SELECT * FROM filmes where id_filme = 1"; //Select na tabela de alunos
+                                $result = mysqli_query($conn, $sql);
+                                while ($filme = mysqli_fetch_assoc($result)) {
+                                    echo $filme['sinopse'];
+                                }
+                                ?></p>
                         </div>
                     </div>
                 </div>

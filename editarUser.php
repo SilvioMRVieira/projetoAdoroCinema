@@ -4,29 +4,28 @@ session_start();
 
 include_once('connect.php');
 
-if(!empty($_GET['id_filme'])) {
+if(!empty($_GET['id_usuario'])) {
 
-    $id = $_GET['id_filme'];
+    $id = $_GET['id_usuario'];
 
-    $sql = "SELECT * FROM filmes WHERE id_filme = $id";
+    $sql = "SELECT * FROM usuarios WHERE id_usuario = $id";
 
     $result = mysqli_query($conn, $sql);
 
     if ($result->num_rows > 0) {
-        while ($filmes = mysqli_fetch_assoc($result)) {
-            $id = $filmes['id_filme'];
-            $nome = $filmes['nome_filme'];
-            $arquivo = $filmes['arquivo'];
-            $trailer = $filmes['trailer'];
-            $diretor = $filmes['diretor'];
-            $sinopse = $filmes['sinopse'];           
+        while ($usuarios = mysqli_fetch_assoc($result)) {
+            $id = $usuarios['id_usuario'];
+            $nome = $usuarios['nome_usuario'];
+            $email = $usuarios['email'];
+            $senha = $usuarios['senha'];
+            $nivel = $usuarios['nivel'];
         }
     } else {
-        header("Location: dashboardFilmes.php");
+        header("Location: dashboardUser.php");
     }
 } else {
 
-    header("Location: dashboardFilmes.php");
+    header("Location: dashboardUser.php");
 };  
 
 ?>
@@ -40,7 +39,7 @@ if(!empty($_GET['id_filme'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/login.css">
-    <title>Atualizar Filme</title>
+    <title>Atualizar Usuário</title>
 </head>
 
 <body>
@@ -98,14 +97,13 @@ if(!empty($_GET['id_filme'])) {
                     <a href="adoroCinema.html"><img src="img/adorocinema.png" alt="adorocinema"></a>
                 </div>
                 <div class="boas-vindas">
-                    <h1>Atualizar Filme</h1>
+                    <h1>Atualizar Usuário</h1>
                 </div>
-                <form enctype="multipart/form-data" action="salvarEditarFilmes.php" method="post">
+                <form enctype="multipart/form-data" action="salvarEditarUser.php" method="post">
                     <input type="text" name="nome" id="" value="<?php echo $nome ?>">
-                    <input type="file" name="arquivo" value="<?php echo $arquivo ?>">
-                    <input type="text" name='trailer' value='<?php echo $trailer ?>'>
-                    <input type=" text" name="diretor" value="<?php echo $diretor ?>">
-                    <input type="text" name="sinopse" value="<?php echo $sinopse ?>">
+                    <input type="email" name="email" value="<?php echo $email ?>">
+                    <input type="password" name='senha' value='<?php echo $senha ?>'>
+                    <input type=" text" name="nivel" value="<?php echo $nivel ?>">
                     <input type="hidden" name="id" value="<?php echo $id ?>">
                     <button type="submit" name="update">Atualizar</button>
                 </form>

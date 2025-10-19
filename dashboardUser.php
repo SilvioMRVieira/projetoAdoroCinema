@@ -42,12 +42,12 @@ $result = mysqli_query($conn, $sql);
                     <li>Usuários</li>
                 </a>
                 <a href="dashboardCategorias.php">
-                    <li>Categorias</li>
+                    <li aria-disabled="true">Categorias</li>
                 </a><a href="dashboardFilmes.php">
-                    <li>Filmes</li>
+                    <li aria-disabled="true">Filmes</li>
                 </a>
                 <a href="dashboardSeries.php">
-                    <li>Séries</li>
+                    <li aria-disabled="true">Séries</li>
                 </a>
             </ul>
         </aside>
@@ -76,7 +76,7 @@ $result = mysqli_query($conn, $sql);
                                 echo "<td>" . $user['email'] . "</td>";
                                 echo "<td>" . $user['senha'] . "</td>";
                                 echo "<td>" . $user['nivel'] . "</td>";
-                                echo "<td> <a style='color: #dc2026;' href='#' ><i class='fa-regular fa-pen-to-square'></i></a>
+                                echo "<td> <a style='color: #dc2026;' href='editarUser.php?id_usuario=$user[id_usuario];'><i class='fa-regular fa-pen-to-square'></i></a>
                                 <a style='color: #dc2026;' href='#'><i class='fa-regular fa-trash-can'></i></a> </td>";
 
                                 ?>

@@ -1,71 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#modal, #modalConfirmacao {
+    position: relative; 
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;  /* centraliza horizontal */
-    align-items: center;      /* centraliza vertical */
-    min-height: 100vh;        /* altura mínima da tela */
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-main {
-  width: 100%;
-  display: flex;
-  padding: 20px;
-}
-
-.img-msg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 50%;
-  background-color: #000;
-  background: url(/img/login/cartazes.jpg);
-  background-size: cover;
-  border-radius: 10px 0 0 10px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-.img-msg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9); /* preto 50% transparente */
-  border-radius: 10px 0 0 10px;
-  z-index: 1;
-}
-
-.img-text {
-  position: relative;
-  display: flex;
-  z-index: 2;
-  margin: 4% 5%;
-  align-items: center;
-}
-
-.icon {
-  color: gold;
-}
-
-.texto {
-  color: #fff;
-  margin-left: 3%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+#conteudoModal {
+    padding-left: 15px;
 }
 
 /* Tela de login */
 
- .cad-login {
-  width: 50%;
+.cad-login {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0 10px 10px 0;
@@ -75,7 +34,7 @@ main {
 .form {
   background: white;
   width: 50%;
-} 
+}
 
 /* Logo */
 .log {
@@ -143,17 +102,7 @@ main {
   color: #db4437;
 }
 
-/* Divisor OU */
-.ou {
-  text-align: center;
-  margin: 10px 0;
-}
 
-.ou p {
-  font-size: 13px;
-  color: #95a5a6;
-  letter-spacing: 1px;
-}
 
 /* Formulário */
 form {
@@ -197,7 +146,7 @@ form > p {
   text-align: center;
 }
 
-form button {
+form button, #fecharModalConfirmacao {
   width: 100%;
   padding: 10px;
   background: linear-gradient(135deg, gold 0%, #ffeb33 100%);
@@ -271,4 +220,20 @@ form button:active {
   .log img {
     max-width: 150px;
   }
+}
+
+#fecharModal {  
+  visibility: hidden;
+  width: 50%;
+  padding: 10px 20px;
+  color: #dc2026;
+  border: 2px solid #dc2026;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

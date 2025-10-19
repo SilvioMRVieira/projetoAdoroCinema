@@ -5,83 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/login.css">
     <title>Cadastrar Filme</title>
 </head>
 
 <body>
-    <main>
-        <section class="img-msg">
-            <div class="mensagem">
-                <div class="img-text">
-                    <div class="icon">
-                        <i class="fa-regular fa-star"></i>
+    <main>       
+            <section class="cad-login">
+                <div class="form">
+                    <div class="log">
+                        <a href="adoroCinema.html"><img src="img/adorocinema.png" alt="adorocinema"></a>
                     </div>
-                    <div class="texto">
-                        <p>Avalie os filmes e séries e dê sua opinião</p>
+                    <div class="boas-vindas">
+                        <h1>cadastro de filme</h1>
                     </div>
-                </div>
-                <div class="img-text">
-                    <div class="icon">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <div class="texto">
-                        Descubra as avaliações e comentários de seus amigos
-                    </div>
-                </div>
-                <div class="img-text">
-                    <div class="icon">
-                        <i class="fa-regular fa-envelope"></i>
-                    </div>
-                    <div class="texto">
-                        Receba boletins informativos regulares que o manterão atualizado sobre novos lançamentos,
-                        filmes, séries e o mundo do cinema.
+                    <form id="formFilme" enctype="multipart/form-data" action="cadastrarFilme.php" method="post">
+                        <input type="text" name="nome" id="" placeholder="NOME DO FILME">
+                        <input type="file" name="arquivo" placeholder="ARQUIVO">
+                        <input type="text" name="trailer" id="" placeholder="TRAILER DO FILME">
+                        <input type="text" name="diretor" placeholder="NOME DO DIRETOR">
+                        <input type="text" name="sinopse" placeholder="SINOPSE">
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                    <div class="termos">
+                        <p></p>
+                        <p class="entrar">Lista de filmes <a href="dashboardFilmes.php"><span>Entre</span></a></p>
                     </div>
                 </div>
-                <div class="img-text">
-                    <div class="icon">
-                        <i class="fa-solid fa-ticket"></i>
-                    </div>
-                    <div class="texto">
-                        Salve seus cinemas favoritos para organizar a sua programação
-                    </div>
-                </div>
-                <div class="img-text">
-                    <div class="icon">
-                        <i class="fa-regular fa-pen-to-square"></i>
-                    </div>
-                    <div class="texto">
-                        Crie suas coleções de filmes e séries para compartilhar com seus amigos e a comunidade
-                        AdoroCinema
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <section class="cad-login">
-            <div class="form">
-                <div class="log">
-                    <a href="adoroCinema.html"><img src="img/adorocinema.png" alt="adorocinema"></a>
-                </div>
-                <div class="boas-vindas">
-                    <h1>cadastro de filme</h1>
-                </div>                
-                <form enctype="multipart/form-data" action="cadastrarFilme.php" method="post">
-                    <input type="text" name="nome" id="" placeholder="NOME DO FILME">
-                    <input type="file" name="arquivo" placeholder="ARQUIVO">
-                    <input type="text" name="trailer" id="" placeholder="TRAILER DO FILME">
-                    <input type="text" name="diretor" placeholder="NOME DO DIRETOR">
-                    <input type="text" name="sinopse" placeholder="SINOPSE">
-                    <button type="submit">Cadastrar</button>
-                </form>
-                <div class="termos">
-                    <p></p>
-                    <p class="entrar">Lista de filmes <a href="dashboardFilmes.php"><span>Entre</span></a></p>
-                </div>
-            </div>
-        </section>
+            </section>
     </main>
-
+        
 </body>
 
 </html>

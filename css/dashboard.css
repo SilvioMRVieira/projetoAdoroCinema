@@ -117,7 +117,7 @@ aside ul {
   margin: 0;
 }
 
-aside ul li {
+aside ul li, .btn_filmes {
   padding: 15px 10px;
   margin: 8px 0;
   color: #333;
@@ -128,12 +128,19 @@ aside ul li {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+li[aria-disabled="true"] {
+  opacity: 0.5;
+  color: #999;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 aside ul a {
   font-size: 0.8rem;
   text-decoration: none;
 }
 
-aside ul li:hover {
+aside ul li:hover, .btn_filmes:hover {
   background: linear-gradient(135deg, #514e4e 0%, #dc2026 100%);
   color: #fff;
   transform: translateX(5px);
@@ -141,36 +148,34 @@ aside ul li:hover {
 }
 
 main {
-  position: relative;
-  top: 3%;
   width: 97%;
   grid-area: main;
 }
 
-.btn-filmes {
-  position: relative;
-  top: -10px;
+.btn_filmes {
   width: 100%;
-  padding: 10px 20px;
+  padding: 15px 20px;
   color: #dc2026;
   border: 2px solid #dc2026;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fff;
 }
 
-.btn-filmes:hover {
+.btn_filmes:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 25px rgba(255, 126, 234, 0.4);
 }
 
-.btn-filmes:active {
-  transform: translateY(0);
+.btn-bar {
+  width: 100%;
+  border: 2px solid #dc2026;
+
 }
 
 .welcome {
@@ -203,6 +208,7 @@ p {
 }
 
 table {
+  margin-top: 1%;
   width: 100%;
   border-collapse: collapse;
   background: #fff;
@@ -261,3 +267,6 @@ table tbody tr:last-child {
     visibility: visible;
   }
 }
+
+
+
