@@ -1,7 +1,13 @@
 <?php
 
 session_start();
-include_once('connect.php');
+include_once('back-end/connect.php');
+
+if(!isset($_SESSION['nivel'])) {
+     header(header: 'location: login.php');
+    exit;
+}
+
 $sql = "SELECT * FROM usuarios";
 $result = mysqli_query($conn, $sql);
 
@@ -63,10 +69,29 @@ $result = mysqli_query($conn, $sql);
                 <li><a href="novelas">NOVELAS</a></li>
             </ul>
             <ul class="dropdown">
+                <li>
+
+                </li>
                 <li><a class="minha-conta" href="minhaConta">MINHA CONTA</a></li>
                 <div class="dropdown-content login">
-                    <a href="login.php">CONECTAR</a>
-                    <a class="criar-conta" href="cadUser.html">CRIAR UMA CONTA</a>
+                    <a>
+                        <?php echo " " . $_SESSION['nome_usuario']; ?>
+                    </a>
+                    <?php if($_SESSION['nivel'] == 'gestor'): ?>
+                    <!-- Itens exclusivos para administrador -->
+                    <a href="dashboard.php">Painel de Controle</a>
+                    <a href="back-end/logout.php">SAIR</a>
+                    <?php endif; ?>
+
+                    <?php if($_SESSION['nivel'] == 'usuario'): ?>
+                    <!-- Itens para admin e moderador -->
+                    <a href="back-end/logout.php">SAIR</a>
+                    <?php endif; ?>
+
+                    <!-- Botão de logout para todos -->
+                    <!-- <a href="logout.php">Sair</a> -->
+                    <!-- <a href="login.php">CONECTAR</a>
+                    <a class="criar-conta" href="cadUser.html">CRIAR UMA CONTA</a> -->
                 </div>
             </ul>
         </nav>

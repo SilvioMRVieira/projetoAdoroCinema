@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once('connect.php');
+include_once('back-end/connect.php');
 $sql = "SELECT * FROM filmes";
 $result = mysqli_query($conn, $sql);
 
@@ -66,10 +66,8 @@ $result = mysqli_query($conn, $sql);
                 <li><a class="minha-conta" href="minhaConta">
                         <?php echo " " . $_SESSION['nome_usuario']; ?>
                     </a></li>
-
                 <div class="dropdown-content login">
-                    <a href="dashboard.php">PAINEL CONTROLE</a>
-                    <a href="logout.php">SAIR</a>
+                    <a href="back-end/logout.php">SAIR</a>
                     <!-- <a class="criar-conta" href="cadUser.html">CRIAR UMA CONTA</a> -->
                 </div>
             </ul>
@@ -294,29 +292,29 @@ $result = mysqli_query($conn, $sql);
                             <div class="imagem slide1">
                                 <div class="cardImagem">
                                     <img src="<?php
-                                    $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
-                                    $result = mysqli_query($conn, $sql);
-                                    while ($filme = mysqli_fetch_assoc($result)) {
-                                        echo $filme['imagem'];
-                                    }
-                                    ?>" alt="">
+                                                $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
+                                                $result = mysqli_query($conn, $sql);
+                                                while ($filme = mysqli_fetch_assoc($result)) {
+                                                    echo $filme['imagem'];
+                                                }
+                                                ?>" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
                                     <p class="linha1"><?php
-                                    $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
-                                    $result = mysqli_query($conn, $sql);
-                                    while ($filme = mysqli_fetch_assoc($result)) {
-                                        echo $filme['sinopse'];
-                                    }
-                                    ?></p>
+                                                        $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
+                                                        $result = mysqli_query($conn, $sql);
+                                                        while ($filme = mysqli_fetch_assoc($result)) {
+                                                            echo $filme['sinopse'];
+                                                        }
+                                                        ?></p>
                                     <p class="linha2"><?php
-                                    $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
-                                    $result = mysqli_query($conn, $sql);
-                                    while ($filme = mysqli_fetch_assoc($result)) {
-                                        echo $filme['diretor'];
-                                    }
-                                    ?></p>
+                                                        $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
+                                                        $result = mysqli_query($conn, $sql);
+                                                        while ($filme = mysqli_fetch_assoc($result)) {
+                                                            echo $filme['diretor'];
+                                                        }
+                                                        ?></p>
                                 </div>
                             </div>
                             <div class="imagem slide2">
@@ -554,7 +552,7 @@ $result = mysqli_query($conn, $sql);
                     <button><a href="">Todas as noticias de filmes</a></button>
                     <button><a href="">Todas as matérias especiais</a></button>
                 </div>
-
+                <!-- Arquivo de video para o trailer -->
                 <div class="trailers">
                     <div class="item-titulo">
                         <div class="bar-left"></div>

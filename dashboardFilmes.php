@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once('connect.php');
+include_once('back-end/connect.php');
 $sql = "SELECT * FROM filmes"; //Select na tabela de alunos
 $result = mysqli_query($conn, $sql);
 
@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="icon">
                     <a href="dashboard.php"><i class="fa-regular fa-house"></i></a>
                 </div>
-                <button><a href="logout.php">Sair</a></button>
+                <button><a href="back-end/logout.php">Sair</a></button>
             </div>
         </header>
         <aside>

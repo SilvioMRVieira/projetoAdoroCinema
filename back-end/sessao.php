@@ -22,35 +22,36 @@ if ($result->num_rows > 0) { //processa o result enquanto a quantidade de linhas
     $senha = $_POST['senha'];  
 
     // verifica se os dados enviados pelo formulário com o método post estão de acordo com os registros do banco de dados da tabela usuários
-    if ($conta === $email && $pass === $senha && $level === 'usuario') { //verificação de usuario
-      // cria a session
-      $_SESSION['email'] = $email;
-      $_SESSION['senha'] = $senha;
-      $_SESSION['nome_usuario'] = $nome;
-
-      // echo $email;
-
-      header(header: 'location: aCinemaUser.php'); //carrega o portal
-      exit;
-    } 
-    if ($conta === $email && $pass === $senha && $level === 'gestor') { //verificação de usuario
-      // cria a session
-      $_SESSION['email'] = $email;
-      $_SESSION['senha'] = $senha;
-      $_SESSION['nome_usuario'] = $nome;
-
-      header(header: 'location: aCinemaAdmin.php'); //carrega o portal
-      exit;
-    } 
     if ($conta === $email && $pass === $senha) { //verificação de usuario
       // cria a session
       $_SESSION['email'] = $email;
       $_SESSION['senha'] = $senha;
       $_SESSION['nome_usuario'] = $nome;
+      $_SESSION['nivel'] = $level;
 
-      header(header: 'location: index.php'); //carrega o porta
+      // echo $email;
+
+      header(header: 'location: ../adoroCinema.php'); //carrega o portal
       exit;
-    }   
+    } 
+    // if ($conta === $email && $pass === $senha && $level === 'gestor') { //verificação de usuario
+    //   // cria a session
+    //   $_SESSION['email'] = $email;
+    //   $_SESSION['senha'] = $senha;
+    //   $_SESSION['nome_usuario'] = $nome;
+
+    //   header(header: 'location: ../aCinemaAdmin.php'); //carrega o portal
+    //   exit;
+    // } 
+    // if ($conta === $email && $pass === $senha) { //verificação de usuario
+    //   // cria a session
+    //   $_SESSION['email'] = $email;
+    //   $_SESSION['senha'] = $senha;
+    //   $_SESSION['nome_usuario'] = $nome;
+
+    //   header(header: 'location: index.php'); //carrega o porta
+    //   exit;
+    // }   
   }
 }
   if (empty($_SESSION['email'])) {

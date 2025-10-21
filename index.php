@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once 'connect.php';
+include_once 'back-end/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

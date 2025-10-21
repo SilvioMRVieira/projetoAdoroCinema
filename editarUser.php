@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once('connect.php');
+include_once('back-end/connect.php');
 
 if (!empty($_GET['id_usuario'])) {
 
@@ -99,7 +99,7 @@ if (!empty($_GET['id_usuario'])) {
                 <div class="boas-vindas">
                     <h1>Atualizar Usuário</h1>
                 </div>
-                <form enctype="multipart/form-data" action="salvarEditarUser.php" method="post">
+                <form enctype="multipart/form-data" action="back-end/salvarEditarUser.php" method="post">
                     <input type="text" name="nome" id="" value="<?php echo $nome ?>">
                     <input type="email" name="email" value="<?php echo $email ?>">
                     <input type="password" name='senha' value='<?php echo $senha ?>'>

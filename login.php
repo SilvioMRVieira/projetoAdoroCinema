@@ -72,7 +72,7 @@ session_start();
                     <h1>bem-vindo(a)</h1>
                     <p>Entre e divirta-se!</p>
                 </div>
-                <form action="sessao.php" method="post">
+                <form action="back-end/sessao.php" method="post">
                     <input type="email" name="email" placeholder="EMAIL">
                     <input type="password" name="senha" placeholder="SENHA">
                     <button type="submit">Entrar</button>

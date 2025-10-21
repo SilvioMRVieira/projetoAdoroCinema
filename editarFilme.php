@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once('connect.php');
+include_once('back-end/connect.php');
 
 if(!empty($_GET['id_filme'])) {
 
@@ -100,7 +100,7 @@ if(!empty($_GET['id_filme'])) {
                 <div class="boas-vindas">
                     <h1>Atualizar Filme</h1>
                 </div>
-                <form enctype="multipart/form-data" action="salvarEditarFilmes.php" method="post">
+                <form enctype="multipart/form-data" action="back-end/salvarEditarFilmes.php" method="post">
                     <input type="text" name="nome" id="" value="<?php echo $nome ?>">
                     <input type="file" name="arquivo" value="<?php echo $arquivo ?>">
                     <input type="text" name='trailer' value='<?php echo $trailer ?>'>
