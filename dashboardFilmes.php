@@ -44,15 +44,14 @@ $result = mysqli_query($conn, $sql);
                 <a href="dashboardCategorias.php">
                     <li aria-disabled="true">Categorias</li>
                 </a><a href="dashboardFilmes.php">
-                    <li style="color: #dc2026;border: 2px solid #dc2026;">Filmes</li>
+                    <li style="color: #dc2026;">Filmes</li>
                 </a>
                 <a href=" dashboardSeries.php">
                     <li aria-disabled="true">Séries</li>
                 </a>
             </ul>
-            <div class="btn-bar"></div>
             <div>
-                <button class="btn_filmes">Novo</button>
+                <button class="btn_filmes"><i class="fa-solid fa-video"></i></button>
             </div>
 
         </aside>
@@ -84,7 +83,7 @@ $result = mysqli_query($conn, $sql);
                                 echo "<td>" . $filme['diretor'] . "</td>";
                                 echo "<td>" . $filme['sinopse'] . "</td>";
                                 echo "<td> <a style='color: #dc2026;' href='editarFilme.php?id_filme=$filme[id_filme];' ><i class='fa-regular fa-pen-to-square'></i></a>
-                                <a style='color: #dc2026;' href='#'><i class='fa-regular fa-trash-can'></i></a> </td>";
+                                <a style='color: #dc2026;' href='deleteFilme.php?id_filme=$filme[id_filme];'><i class='fa-regular fa-trash-can'></i></a> </td>";
                                 ?>
                             <?php
                             };

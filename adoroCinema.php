@@ -2,7 +2,7 @@
 
 session_start();
 include_once('connect.php');
-$sql = "SELECT * FROM filmes"; //Select na tabela de alunos
+$sql = "SELECT * FROM usuarios";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -87,6 +87,7 @@ $result = mysqli_query($conn, $sql);
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
                 </div>
+                <!-- Primeiro carrossel -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="   <?php
@@ -176,7 +177,7 @@ $result = mysqli_query($conn, $sql);
                 </button>
             </div>
         </section>
-
+        <!-- cards widescreen -->
         <section class="card-img">
             <div class="carousel-container">
                 <div class="carousel" id="carousel">
@@ -187,6 +188,7 @@ $result = mysqli_query($conn, $sql);
                                 Confira o debate no OdeioCinema!</p>
                         </div>
                     </div>
+
                     <div class="carousel-slide slide2">
                         <img src=" <?php
                                     $sql = "SELECT * FROM filmes where id_filme = 3"; //Select na tabela de alunos
@@ -282,16 +284,35 @@ $result = mysqli_query($conn, $sql);
                         <div class="bar-left"></div>
                         <h3>Estreias da semana</h3>
                     </div>
+                    <!-- card padrão -->
                     <section class="carousel-estreia">
                         <div class="container-estreias show1234">
                             <div class="imagem slide1">
                                 <div class="cardImagem">
-                                    <img src="img/carouselEstreias/batalha.jpg" alt="">
+                                    <img src="<?php
+                                    $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
+                                    $result = mysqli_query($conn, $sql);
+                                    while ($filme = mysqli_fetch_assoc($result)) {
+                                        echo $filme['imagem'];
+                                    }
+                                    ?>" alt="">
                                     <h1 class="legenda">Sessões</h1>
                                 </div>
                                 <div class="nomeFilme">
-                                    <p class="linha1">Uma Batalha Ap...</p>
-                                    <p class="linha2">De Paul Thomas Ande...</p>
+                                    <p class="linha1"><?php
+                                    $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
+                                    $result = mysqli_query($conn, $sql);
+                                    while ($filme = mysqli_fetch_assoc($result)) {
+                                        echo $filme['sinopse'];
+                                    }
+                                    ?></p>
+                                    <p class="linha2"><?php
+                                    $sql = "SELECT * FROM filmes where id_filme = 6"; //Select na tabela de alunos
+                                    $result = mysqli_query($conn, $sql);
+                                    while ($filme = mysqli_fetch_assoc($result)) {
+                                        echo $filme['diretor'];
+                                    }
+                                    ?></p>
                                 </div>
                             </div>
                             <div class="imagem slide2">

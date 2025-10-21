@@ -66,7 +66,7 @@ session_start();
         <section class="cad-login">
             <div class="form">
                 <div class="log">
-                    <a href="adoroCinema.html"><img src="img/adorocinema.png" alt="adorocinema"></a>
+                    <a href="adoroCinema.php"><img src="img/adorocinema.png" alt="adorocinema"></a>
                 </div>
                 <div class="boas-vindas">
                     <h1>bem-vindo(a)</h1>

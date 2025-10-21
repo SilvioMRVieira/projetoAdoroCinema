@@ -30,7 +30,7 @@ if ($result->num_rows > 0) { //processa o result enquanto a quantidade de linhas
 
       // echo $email;
 
-      header(header: 'location: index.php'); //carrega o portal
+      header(header: 'location: aCinemaUser.php'); //carrega o portal
       exit;
     } 
     if ($conta === $email && $pass === $senha && $level === 'gestor') { //verificação de usuario
@@ -39,7 +39,7 @@ if ($result->num_rows > 0) { //processa o result enquanto a quantidade de linhas
       $_SESSION['senha'] = $senha;
       $_SESSION['nome_usuario'] = $nome;
 
-      header(header: 'location: dashboard.php'); //carrega o portal
+      header(header: 'location: aCinemaAdmin.php'); //carrega o portal
       exit;
     } 
     if ($conta === $email && $pass === $senha) { //verificação de usuario

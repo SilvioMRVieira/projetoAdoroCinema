@@ -4,7 +4,7 @@ session_start();
 
 include_once('connect.php');
 
-if(!empty($_GET['id_usuario'])) {
+if (!empty($_GET['id_usuario'])) {
 
     $id = $_GET['id_usuario'];
 
@@ -26,7 +26,7 @@ if(!empty($_GET['id_usuario'])) {
 } else {
 
     header("Location: dashboardUser.php");
-};  
+};
 
 ?>
 
@@ -103,12 +103,31 @@ if(!empty($_GET['id_usuario'])) {
                     <input type="text" name="nome" id="" value="<?php echo $nome ?>">
                     <input type="email" name="email" value="<?php echo $email ?>">
                     <input type="password" name='senha' value='<?php echo $senha ?>'>
-                    <input type=" text" name="nivel" value="<?php echo $nivel ?>">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="nivel" value="usuario"
+                                <?php echo $nivel == 'usuario' ? 'checked' : '' ?> required>
+                            Usuário
+                        </label>
+
+                        <label>
+                            <input type="radio" name="nivel" value="gestor"
+                                <?php echo $nivel == 'gestor' ? 'checked' : '' ?> required>
+                            Gestor
+                        </label>
+
+                        <label>
+                            <input type="radio" name="nivel" value="admin"
+                                <?php echo $nivel == 'admin' ? 'checked' : '' ?> required>
+                            Admin
+                        </label>
+                    </div>
+
                     <input type="hidden" name="id" value="<?php echo $id ?>">
                     <button type="submit" name="update">Atualizar</button>
                 </form>
                 <div class="termos">
-                    <p class="entrar">Lista de filmes <a href="dashboardFilmes.php"><span>Entre</span></a></p>
+                    <p class="entrar">Lista de usuários <a href="dashboardUser.php"><span>Entre</span></a></p>
                 </div>
             </div>
         </section>

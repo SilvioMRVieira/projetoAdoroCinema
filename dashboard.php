@@ -29,7 +29,7 @@ $result = mysqli_query($conn, $sql);
                     <h3> <?php echo " " . $_SESSION['nome_usuario']; ?></h3>
                 </div>
                 <div class="icon">
-                    <a href="dashboard.php"><i class="fa-regular fa-house"></i></a>
+                    <a href="dashboard.php" target="_blank"><i class="fa-regular fa-house"></i></a>
                 </div>
                 <button><a href="logout.php">Sair</a></button>
 

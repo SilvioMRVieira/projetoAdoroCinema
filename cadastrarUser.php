@@ -87,7 +87,7 @@ $conn->close();
                 </div>
 
                 <div class="termos">
-                    <p class="entrar">Agora você tem uma conta! <a href="adoroCinema.html"><span>Voltar</span></a></p>
+                    <p class="entrar">Agora você tem uma conta! <a href="adoroCinema.php"><span>Voltar</span></a></p>
                 </div>
             </div>
         </section>
@@ -96,23 +96,3 @@ $conn->close();
 </body>
 
 </html>
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stilus.css">
-    <title>Cadastrado</title>
-</head>
-
-<body>
-    <div id="msgCadastro">
-        <h1>Usuário(a)
-            <?php echo $nome ?> cadastrado com sucesso!</h1>
-        <a href="adoroCinema.html"><button class="msgCad">Voltar</button></a>
-    </div>
-
-</body>
-
-</html> -->

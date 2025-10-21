@@ -77,26 +77,17 @@ $result = mysqli_query($conn, $sql);
                                 echo "<td>" . $user['senha'] . "</td>";
                                 echo "<td>" . $user['nivel'] . "</td>";
                                 echo "<td> <a style='color: #dc2026;' href='editarUser.php?id_usuario=$user[id_usuario];'><i class='fa-regular fa-pen-to-square'></i></a>
-                                <a style='color: #dc2026;' href='#'><i class='fa-regular fa-trash-can'></i></a> </td>";
+                                <a style='color: #dc2026;' href='deleteUser.php?id_usuario=$user[id_usuario];'><i class='fa-regular fa-trash-can'></i></a> </td>";
 
                                 ?>
                             <?php
                             };
 
                             ?>
-
-
                         </tbody>
                     </table>
 
                 </div>
-
-
-                <?php
-                //carregando resultados do select
-
-                ?>
-
 
             </section>
 

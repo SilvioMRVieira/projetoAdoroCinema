@@ -2,7 +2,7 @@
 
 session_start();
 include_once('connect.php');
-$sql = "SELECT * FROM categorias"; //Select na tabela de alunos
+$sql = "SELECT * FROM series"; //Select na tabela de alunos
 $result = mysqli_query($conn, $sql);
 
 
@@ -39,17 +39,20 @@ $result = mysqli_query($conn, $sql);
         <aside>
             <ul>
                 <a href="dashboardUser.php">
-                    <li>Usuários</li>
+                    <li aria-disabled="true">Usuários</li>
                 </a>
                 <a href="dashboardCategorias.php">
-                    <li>Categorias</li>
+                    <li aria-disabled="true">Categorias</li>
                 </a><a href="dashboardFilmes.php">
-                    <li>Filmes</li>
+                    <li aria-disabled="true">Filmes</li>
                 </a>
-                <a href="dashboardSeries.php">
-                    <li>Séries</li>
+                <a href=" dashboardSeries.php">
+                    <li style="color: #dc2026;">Séries</li>
                 </a>
             </ul>
+            <div>
+                <button class="btn_serie"><i class="fa-solid fa-video"></i></button>
+            </div>
         </aside>
         <main>
             <section>
@@ -58,17 +61,28 @@ $result = mysqli_query($conn, $sql);
                     <table>
                         <thead>
                             <tr>
+                                <th>cartaz</th>
                                 <th>ID</th>
                                 <th>Nome</th>
+                                <th>diretor</th>
+                                <th>sinopse</th>
+                                <th>plataforma</th>
+                                <th>editar</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            while ($categoria = mysqli_fetch_assoc($result)) { //montando array associativo
+                            while ($serie = mysqli_fetch_assoc($result)) { //montando array associativo
                             ?>
                             <?php echo "<tr>";
-                                echo "<td>" . $categoria['id_categoria'] . "</td>";
-                                echo "<td>" . $categoria['nome_categoria'] . "</td>"; 
+                                echo "<td>" . $serie['arquivo'] . "</td>";
+                                echo "<td>" . $serie['id_serie'] . "</td>";
+                                echo "<td>" . $serie['nome_serie'] . "</td>";
+                                echo "<td>" . $serie['diretor'] . "</td>";
+                                echo "<td>" . $serie['sinopse'] . "</td>";
+                                echo "<td>" . $serie['plataforma'] . "</td>";
+                                echo "<td> <a style='color: #dc2026;' href='editarSerie.php?id_serie=$serie[id_serie];' ><i class='fa-regular fa-pen-to-square'></i></a>
+                                <a style='color: #dc2026;' href='#'><i class='fa-regular fa-trash-can'></i></a> </td>";
                                 ?>
                             <?php
                             };

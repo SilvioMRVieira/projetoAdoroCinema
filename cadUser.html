@@ -61,7 +61,7 @@
         <section class="cad-login">
             <div class="form">
                 <div class="log">
-                    <a href="adoroCinema.html"><img src="img/adorocinema.png" alt="adorocinema"></a>
+                    <a href="adoroCinema.php"><img src="img/adorocinema.png" alt="adorocinema"></a>
                 </div>
                 <div class="boas-vindas">
                     <h1>Não fique sozinho</h1>
@@ -78,13 +78,13 @@
                     <input type="text" name="nome" id="" placeholder="NOME">
                     <input type="email" name="email" placeholder="EMAIL" pattern="[^@]+@[^@]+\.[^@]+"
                             title="Por favor, insira um endereço de email válido (ex: email@dominio.com)" required>
-                    <input type="password" name="senha" placeholder="SENHA">
+                    <input type="password" name="senha" pattern="\d{8}" placeholder="SENHA" title="Insira uma senha com no mínimo 8 caracteres" required>
                     <p>8 caracteres contendo um caractere maiúsculo, um dígito e um caractere especial</p>
                     <button type="submit">Enviar</button>
                 </form>
                 <div class="termos">
                     <p>Indo adiante, você confirma que aceita as <span>condições gerais de uso</span> na <span>política de privacidade</span>.</p>
-                    <p class="entrar">Você tem uma conta? <a href="login.html"><span>Entre</span></a></p>
+                    <p class="entrar">Você tem uma conta? <a href="login.php"><span>Entre</span></a></p>
                 </div>
             </div>
         </section>
