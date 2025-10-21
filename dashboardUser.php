@@ -42,12 +42,12 @@ $result = mysqli_query($conn, $sql);
                     <li>Usuários</li>
                 </a>
                 <a href="dashboardCategorias.php">
-                    <li aria-disabled="true">Categorias</li>
+                    <li>Categorias</li>
                 </a><a href="dashboardFilmes.php">
-                    <li aria-disabled="true">Filmes</li>
+                    <li>Filmes</li>
                 </a>
                 <a href="dashboardSeries.php">
-                    <li aria-disabled="true">Séries</li>
+                    <li>Séries</li>
                 </a>
             </ul>
         </aside>

@@ -39,15 +39,15 @@ $result = mysqli_query($conn, $sql);
         <aside>
             <ul>
                 <a href="dashboardUser.php">
-                    <li aria-disabled="true">Usuários</li>
+                    <li>Usuários</li>
                 </a>
                 <a href="dashboardCategorias.php">
-                    <li aria-disabled="true">Categorias</li>
+                    <li>Categorias</li>
                 </a><a href="dashboardFilmes.php">
-                    <li aria-disabled="true">Filmes</li>
+                    <li>Filmes</li>
                 </a>
                 <a href=" dashboardSeries.php">
-                    <li style="color: #dc2026;">Séries</li>
+                    <li>Séries</li>
                 </a>
             </ul>
             <div>
